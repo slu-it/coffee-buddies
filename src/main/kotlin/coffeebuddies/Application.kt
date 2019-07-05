@@ -22,7 +22,7 @@ class CoffeeBuddyController {
     @PostMapping("/pick")
     fun handlePick(
         @RequestBody buddies: Set<Buddy>,
-        @RequestParam(required = false) groups: Set<Group>?
+        @RequestParam(required = false) groups: Set<String>?
     ): Set<Buddy> {
         if (groups != null) {
             return pickOnePerGroup(buddies, groups)

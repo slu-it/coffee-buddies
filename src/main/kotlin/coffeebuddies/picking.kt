@@ -6,7 +6,7 @@ fun pickTwo(buddies: Set<Buddy>): Set<Buddy> {
     return buddies.shuffled().take(2).toSet()
 }
 
-fun pickOnePerGroup(buddies: Set<Buddy>, groups: Set<Group>): Set<Buddy> {
+fun pickOnePerGroup(buddies: Set<Buddy>, groups: Set<String>): Set<Buddy> {
     val groupToBuddies = mapToGroup(buddies)
     return groups.asSequence()
         .map { group -> groupToBuddies.getValue(group) }
@@ -14,8 +14,8 @@ fun pickOnePerGroup(buddies: Set<Buddy>, groups: Set<Group>): Set<Buddy> {
         .toSet()
 }
 
-private fun mapToGroup(buddies: Set<Buddy>): Map<Group, Set<Buddy>> {
-    val groupToBuddies = mutableMapOf<Group, MutableSet<Buddy>>()
+private fun mapToGroup(buddies: Set<Buddy>): Map<String, Set<Buddy>> {
+    val groupToBuddies = mutableMapOf<String, MutableSet<Buddy>>()
     buddies.forEach { buddy ->
         buddy.groups.forEach { group ->
             groupToBuddies.computeIfAbsent(group) { HashSet() }.add(buddy)
