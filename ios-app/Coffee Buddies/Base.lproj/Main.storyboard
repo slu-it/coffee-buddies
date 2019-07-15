@@ -25,6 +25,20 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fCp-Ic-okG" id="ct0-QF-Fol">
                                     <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1x-XU-HcZ">
+                                            <rect key="frame" x="15" y="8" width="347" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N1x-XU-HcZ" firstAttribute="leading" secondItem="ct0-QF-Fol" secondAttribute="leading" constant="15" id="The-s6-3hi"/>
+                                        <constraint firstAttribute="trailing" secondItem="N1x-XU-HcZ" secondAttribute="trailing" constant="8" id="Y5t-KO-NRs"/>
+                                        <constraint firstItem="N1x-XU-HcZ" firstAttribute="top" secondItem="ct0-QF-Fol" secondAttribute="top" constant="8" id="e1q-Ye-r0b"/>
+                                        <constraint firstAttribute="bottom" secondItem="N1x-XU-HcZ" secondAttribute="bottom" constant="8" id="ynZ-M2-rir"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -66,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="58J-ZL-s66">
-                                <rect key="frame" x="10" y="69" width="394" height="200.00000000000011"/>
+                                <rect key="frame" x="10" y="69" width="394" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Nhd-Gq-Vlm"/>
                                 </constraints>

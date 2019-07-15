@@ -30,28 +30,64 @@ class MainViewController: UIViewController {
     
     private func pickTwoRandomly() {
         let buddies = Array(buddyList.pick(amount: 2))
-        setFirstBuddy(buddies[0])
-        setSecondBuddy(buddies[1])
+        if buddies.count == 2 {
+            firstBuddyTextField.text = buddies[0].name
+            secondBuddyTextField.text = buddies[1].name
+        } else if buddies.count == 1 {
+            firstBuddyTextField.text = buddies[0].name
+            secondBuddyTextField.text = "no other buddy present :("
+        } else {
+            firstBuddyTextField.text = "no buddies present at all :("
+            secondBuddyTextField.text = ""
+        }
     }
     
     private func pickOnePerTable() {
         let buddies = buddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
-        setFirstBuddy(buddies[TABLE_ONE]!)
-        setSecondBuddy(buddies[TABLE_TWO]!)
+        
+        if let buddy = buddies[TABLE_ONE] as? Buddy {
+            firstBuddyTextField.text = "Table #1: \(buddy.name)"
+        } else {
+            firstBuddyTextField.text = "no buddy of table #1 present :("
+        }
+        
+        if let buddy = buddies[TABLE_TWO] as? Buddy {
+            secondBuddyTextField.text = "Table #2: \(buddy.name)"
+        } else {
+            secondBuddyTextField.text = "no buddy of table #2 present :("
+        }
     }
     
     private func pickOneInternAndOneExtern() {
         let buddies = buddyList.pick(groups: [INTERN, EXTERN])
-        setFirstBuddy(buddies[INTERN]!)
-        setSecondBuddy(buddies[EXTERN]!)
+        
+        if let buddy = buddies[INTERN] as? Buddy {
+            firstBuddyTextField.text = "Internal: \(buddy.name)"
+        } else {
+            firstBuddyTextField.text = "no internal buddy present :("
+        }
+        
+        if let buddy = buddies[EXTERN] as? Buddy {
+            secondBuddyTextField.text = "External: \(buddy.name)"
+        } else {
+            secondBuddyTextField.text = "no external buddy present :("
+        }
     }
     
     private func setFirstBuddy(_ buddy: Buddy) {
         firstBuddyTextField.text = buddy.name
     }
     
+    private func setFirstBuddyMissing() {
+        firstBuddyTextField.text = "no buddy found :("
+    }
+    
     private func setSecondBuddy(_ buddy: Buddy) {
         secondBuddyTextField.text = buddy.name
+    }
+    
+    private func setSecondBuddyMissing() {
+        secondBuddyTextField.text = "no buddy found :("
     }
     
 }
