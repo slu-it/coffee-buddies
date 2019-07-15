@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Buddy List-->
         <scene sceneID="ERp-cu-lvO">
             <objects>
                 <tableViewController id="6sL-76-Zp4" customClass="BuddyListViewController" customModule="Coffee_Buddies" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="6sL-76-Zp4" id="taK-Rr-Xqg"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="GBb-Lk-oKE"/>
+                    <tabBarItem key="tabBarItem" title="Buddy List" id="GBb-Lk-oKE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgk-IM-j3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="58J-ZL-s66">
-                                <rect key="frame" x="10" y="69" width="394" height="200"/>
+                                <rect key="frame" x="10" y="69" width="394" height="200.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Nhd-Gq-Vlm"/>
                                 </constraints>

@@ -46,13 +46,13 @@ class MainViewController: UIViewController {
         let buddies = buddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
         
         if let buddy = buddies[TABLE_ONE] as? Buddy {
-            firstBuddyTextField.text = "Table #1: \(buddy.name)"
+            firstBuddyTextField.text = buddy.name
         } else {
             firstBuddyTextField.text = "no buddy of table #1 present :("
         }
         
         if let buddy = buddies[TABLE_TWO] as? Buddy {
-            secondBuddyTextField.text = "Table #2: \(buddy.name)"
+            secondBuddyTextField.text = buddy.name
         } else {
             secondBuddyTextField.text = "no buddy of table #2 present :("
         }
@@ -62,13 +62,13 @@ class MainViewController: UIViewController {
         let buddies = buddyList.pick(groups: [INTERN, EXTERN])
         
         if let buddy = buddies[INTERN] as? Buddy {
-            firstBuddyTextField.text = "Internal: \(buddy.name)"
+            firstBuddyTextField.text = buddy.name
         } else {
             firstBuddyTextField.text = "no internal buddy present :("
         }
         
         if let buddy = buddies[EXTERN] as? Buddy {
-            secondBuddyTextField.text = "External: \(buddy.name)"
+            secondBuddyTextField.text = buddy.name
         } else {
             secondBuddyTextField.text = "no external buddy present :("
         }
