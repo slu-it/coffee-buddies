@@ -1,11 +1,3 @@
-//
-//  Buddy.swift
-//  Coffee Buddies
-//
-//  Created by Stefan on 13.07.19.
-//  Copyright © 2019 Stefan Ludwig. All rights reserved.
-//
-
 import Foundation
 
 struct Buddy : Hashable {

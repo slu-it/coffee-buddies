@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Coffee Buddies
-//
-//  Created by Stefan on 13.07.19.
-//  Copyright © 2019 Stefan Ludwig. All rights reserved.
-//
-
 import UIKit
 
 private let TABLE_ONE = "TABLE_ONE"
@@ -17,9 +9,8 @@ private let METHOD_RANDOM_INDEX = 0
 private let METHOD_TABLE_INDEX = 1
 private let METHOD_INTERN_EXTERN_INDEX = 2
 
-
-class ViewController: UIViewController {
-
+class MainViewController: UIViewController {
+    
     // TODO: should be stored in a database to be more flexible
     private let buddyList = BuddyList(
         buddies: [
@@ -44,18 +35,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("MainViewController loaded")
     }
-
+    
     @IBAction func pickButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         switch methodSelector.selectedSegmentIndex {
-            case METHOD_RANDOM_INDEX:
-                pickTwoRandomly()
-            case METHOD_TABLE_INDEX:
-                pickOnePerTable()
-            case METHOD_INTERN_EXTERN_INDEX:
-                pickOneInternAndOneExtern()
-            default:
-                print("unkown method selected")
+        case METHOD_RANDOM_INDEX:
+            pickTwoRandomly()
+        case METHOD_TABLE_INDEX:
+            pickOnePerTable()
+        case METHOD_INTERN_EXTERN_INDEX:
+            pickOneInternAndOneExtern()
+        default:
+            print("unkown method selected")
         }
     }
     
@@ -90,3 +82,4 @@ class ViewController: UIViewController {
 enum Errors: Error {
     case unknownMethodSelected
 }
+
