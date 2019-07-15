@@ -1,6 +1,6 @@
 import UIKit
 
-class BuddyListViewController: UIViewController {
+class BuddyListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
