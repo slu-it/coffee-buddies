@@ -1,33 +1,10 @@
 import UIKit
 
-private let TABLE_ONE = "TABLE_ONE"
-private let TABLE_TWO = "TABLE_TWO"
-private let INTERN = "INTERN"
-private let EXTERN = "EXTERN"
-
 private let METHOD_RANDOM_INDEX = 0
 private let METHOD_TABLE_INDEX = 1
 private let METHOD_INTERN_EXTERN_INDEX = 2
 
 class MainViewController: UIViewController {
-    
-    // TODO: should be stored in a database to be more flexible
-    private let buddyList = BuddyList(
-        buddies: [
-            Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Dennis", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Stephan B.", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Anja", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Christian", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Stefan L.", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Florian", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN])
-        ]
-    )
     
     @IBOutlet weak var methodSelector: UISegmentedControl!
     @IBOutlet weak var firstBuddyTextField: UITextField!

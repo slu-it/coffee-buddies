@@ -1,9 +1,28 @@
 import Foundation
 
-struct Buddy : Hashable {
-    var name: String
-    var groups: Set<String>
-}
+let TABLE_ONE = "TABLE_ONE"
+let TABLE_TWO = "TABLE_TWO"
+let INTERN = "INTERN"
+let EXTERN = "EXTERN"
+
+// initial data when app starts
+// TODO: put into database
+let buddyList = BuddyList(
+    buddies: [
+        Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN], present: true),
+        Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN], present: true),
+        Buddy(name: "Dennis", groups: [TABLE_ONE, INTERN], present: true),
+        Buddy(name: "Stephan B.", groups: [TABLE_ONE, EXTERN], present: true),
+        Buddy(name: "Anja", groups: [TABLE_ONE, EXTERN], present: true),
+        Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN], present: true),
+        Buddy(name: "Christian", groups: [TABLE_TWO, EXTERN], present: true),
+        Buddy(name: "Stefan L.", groups: [TABLE_TWO, EXTERN], present: true),
+        Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN], present: true),
+        Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN], present: true),
+        Buddy(name: "Florian", groups: [TABLE_TWO, INTERN], present: true),
+        Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN], present: true)
+    ]
+)
 
 class BuddyList {
     
@@ -33,4 +52,10 @@ class BuddyList {
         return buddiesByGroup.mapValues { buddies in buddies.randomElement()! }
     }
     
+}
+
+struct Buddy : Hashable {
+    var name: String
+    var groups: Set<String>
+    var present: Bool
 }
