@@ -49,20 +49,32 @@ class ViewController: UIViewController {
     @IBAction func pickButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         switch methodSelector.selectedSegmentIndex {
             case METHOD_RANDOM_INDEX:
-                let buddies = Array(buddyList.pick(amount: 2))
-                setFirstBuddy(buddies[0])
-                setSecondBuddy(buddies[1])
+                pickTwoRandomly()
             case METHOD_TABLE_INDEX:
-                let buddies = buddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
-                setFirstBuddy(buddies[TABLE_ONE]!)
-                setSecondBuddy(buddies[TABLE_TWO]!)
+                pickOnePerTable()
             case METHOD_INTERN_EXTERN_INDEX:
-                let buddies = buddyList.pick(groups: [INTERN, EXTERN])
-                setFirstBuddy(buddies[INTERN]!)
-                setSecondBuddy(buddies[EXTERN]!)
+                pickOneInternAndOneExtern()
             default:
                 print("unkown method selected")
         }
+    }
+    
+    private func pickTwoRandomly() {
+        let buddies = Array(buddyList.pick(amount: 2))
+        setFirstBuddy(buddies[0])
+        setSecondBuddy(buddies[1])
+    }
+    
+    private func pickOnePerTable() {
+        let buddies = buddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
+        setFirstBuddy(buddies[TABLE_ONE]!)
+        setSecondBuddy(buddies[TABLE_TWO]!)
+    }
+    
+    private func pickOneInternAndOneExtern() {
+        let buddies = buddyList.pick(groups: [INTERN, EXTERN])
+        setFirstBuddy(buddies[INTERN]!)
+        setSecondBuddy(buddies[EXTERN]!)
     }
     
     private func setFirstBuddy(_ buddy: Buddy) {
