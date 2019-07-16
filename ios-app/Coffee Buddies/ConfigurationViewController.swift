@@ -1,5 +1,7 @@
 import UIKit
 
+private let NAME_LABEL_TAG = 1000
+
 class ConfigurationViewController: UIViewController {
     
     private var buddyListTableViewDataSource: BuddyListTableViewDataSource?
@@ -20,22 +22,22 @@ class ConfigurationViewController: UIViewController {
 
 private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {
     
-    private let buddyList: BuddyList
+    private let buddyList: Array<Buddy>
     
-    init(_ buddyList: BuddyList) {
+    init(_ buddyList: Array<Buddy>) {
         self.buddyList = buddyList
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return buddyList.count()
+        return buddyList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "BuddyListItem", for: indexPath)
         
-        let buddy = buddyList.getBuddyAt(index: indexPath.row)
+        let buddy = buddyList[indexPath.row]
         
-        if let label = cell.viewWithTag(1000) as? UILabel {
+        if let label = cell.viewWithTag(NAME_LABEL_TAG) as? UILabel {
             label.text = buddy.name
         }
         
@@ -52,14 +54,14 @@ private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {
 
 private class BuddyListTableViewDelegate: NSObject, UITableViewDelegate {
     
-    private let buddyList: BuddyList
+    private let buddyList: Array<Buddy>
     
-    init(_ buddyList: BuddyList) {
+    init(_ buddyList: Array<Buddy>) {
         self.buddyList = buddyList
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let buddy = buddyList.getBuddyAt(index: indexPath.row)
+        let buddy = buddyList[indexPath.row]
         buddy.switchPresent()
         tableView.reloadData()
     }

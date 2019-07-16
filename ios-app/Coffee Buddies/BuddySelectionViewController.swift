@@ -24,7 +24,7 @@ class BuddySelectionViewController: UIViewController {
     }
     
     private func pickTwoRandomly() {
-        let buddies = Array(globalBuddyList.pick(amount: 2))
+        let buddies = globalBuddyList.pick(amount: 2)
         
         if buddies.count == 2 {
             firstBuddyTextField.text = buddies[0].name

@@ -56,7 +56,7 @@ class BuddyTests: XCTestCase {
     func testPickPerGroup() {
         repeated(times: 10) {
             let picks = buddyList.pick(groups: ["INTERN", "EXTERN"])
-                .map { group, buddy in "\(group): \(buddy.name)" }
+                .map { group, buddy in "\(group): \(buddy!.name)" }
             print(picks)
         }
     }
@@ -73,7 +73,7 @@ class BuddyTests: XCTestCase {
         var buddyToCount = [String:Int]()
         repeated(times: repetitions) {
             let pick = buddyList.pick(groups: groups)
-            for (_, buddy) in pick { buddyToCount[buddy.name] = (buddyToCount[buddy.name] ?? 0) + 1 }
+            for (_, buddy) in pick { buddyToCount[buddy!.name] = (buddyToCount[buddy!.name] ?? 0) + 1 }
         }
         let buddyToPercentage = buddyToCount.percentages(repetitions * groups.count)
         

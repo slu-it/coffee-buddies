@@ -1,6 +1,26 @@
 
 import UIKit
 
+let TABLE_ONE = "TABLE_ONE"
+let TABLE_TWO = "TABLE_TWO"
+let INTERN = "INTERN"
+let EXTERN = "EXTERN"
+
+let globalBuddyList = Array(arrayLiteral:
+    Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN]),
+    Buddy(name: "Anja", groups: [TABLE_ONE, EXTERN]),
+    Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Christian", groups: [TABLE_TWO, EXTERN]),
+    Buddy(name: "Dennis", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Florian", groups: [TABLE_TWO, INTERN]),
+    Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN]),
+    Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN]),
+    Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),
+    Buddy(name: "Stefan L.", groups: [TABLE_TWO, EXTERN]),
+    Buddy(name: "Stephan B.", groups: [TABLE_ONE, EXTERN])
+)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
