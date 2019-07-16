@@ -162,11 +162,19 @@
                                 <rect key="frame" x="10" y="643" width="355" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEI-mo-cUR">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="Roll Dice"/>
                                         <connections>
                                             <action selector="pickTwoBuddies" destination="BYZ-38-t0r" eventType="touchUpInside" id="KRK-hL-3rt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-RK-CmF">
+                                        <rect key="frame" x="182.66666666666663" y="0.0" width="172.33333333333337" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Pick"/>
+                                        <connections>
+                                            <action selector="incrementPickedBuddyCounters" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ttj-Ey-Fbq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -196,6 +204,7 @@
                     <connections>
                         <outlet property="firstBuddyTextField" destination="hV6-Hz-urZ" id="0K0-p7-rRc"/>
                         <outlet property="methodSelector" destination="pUZ-z4-p7f" id="fDq-Xp-Ez2"/>
+                        <outlet property="pickButton" destination="dUq-RK-CmF" id="ACJ-ko-V0p"/>
                         <outlet property="secondBuddyTextField" destination="GFj-nX-d0d" id="htt-K6-BKg"/>
                     </connections>
                 </viewController>

@@ -9,12 +9,17 @@ class BuddySelectionViewController: UIViewController {
     @IBOutlet weak var methodSelector: UISegmentedControl!
     @IBOutlet weak var firstBuddyTextField: UITextField!
     @IBOutlet weak var secondBuddyTextField: UITextField!
+    @IBOutlet weak var pickButton: UIButton!
+    
+    private var lastPickedBuddies = Array<Buddy>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func pickTwoBuddies() {
+        lastPickedBuddies.removeAll()
+        
         let methodIndex = methodSelector.selectedSegmentIndex
         if methodIndex == METHOD_RANDOM_INDEX {
             pickRandomly()
@@ -23,11 +28,21 @@ class BuddySelectionViewController: UIViewController {
         } else if methodIndex == METHOD_INTERN_EXTERN_INDEX {
             pickOneInternAndOneExtern()
         }
+        
+        if lastPickedBuddies.count == 2 {
+            pickButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func incrementPickedBuddyCounters() {
+        pickButton.isEnabled = false
+        lastPickedBuddies.forEach { buddy in buddy.incrementPickedCount() }
+        lastPickedBuddies.removeAll()
     }
     
     private func pickRandomly() {
         let buddies = globalBuddyList.pick(amount: 2)
-        buddies.forEach { buddy in buddy.incrementPickedCount() }
+        lastPickedBuddies.append(contentsOf: buddies)
         
         if buddies.count == 2 {
             firstBuddyTextField.text = buddies[0].name
@@ -46,12 +61,14 @@ class BuddySelectionViewController: UIViewController {
         buddies.values.forEach { buddy in buddy?.incrementPickedCount() }
         
         if let buddy = buddies[TABLE_ONE] as? Buddy {
+            lastPickedBuddies.append(buddy)
             firstBuddyTextField.text = buddy.name
         } else {
             firstBuddyTextField.text = "no buddy of table #1 present :("
         }
         
         if let buddy = buddies[TABLE_TWO] as? Buddy {
+            lastPickedBuddies.append(buddy)
             secondBuddyTextField.text = buddy.name
         } else {
             secondBuddyTextField.text = "no buddy of table #2 present :("
@@ -63,12 +80,14 @@ class BuddySelectionViewController: UIViewController {
         buddies.values.forEach { buddy in buddy?.incrementPickedCount() }
         
         if let buddy = buddies[INTERN] as? Buddy {
+            lastPickedBuddies.append(buddy)
             firstBuddyTextField.text = buddy.name
         } else {
             firstBuddyTextField.text = "no internal buddy present :("
         }
         
         if let buddy = buddies[EXTERN] as? Buddy {
+            lastPickedBuddies.append(buddy)
             secondBuddyTextField.text = buddy.name
         } else {
             secondBuddyTextField.text = "no external buddy present :("
