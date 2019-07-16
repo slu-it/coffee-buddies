@@ -23,6 +23,20 @@ class ConfigurationViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    @IBAction func resetStatistics() {
+        let okAction = UIAlertAction(title: "Ok", style: .default) { action in
+            globalBuddyList.resetStatisticalData()
+            self.buddyListTableView.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        let alert = UIAlertController(title: "Reset Statistics", message: "Are you sure?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {

@@ -20,6 +20,10 @@ extension Array where Element == Buddy {
         return buddiesByGroup.mapValues { buddies in buddies.randomElement() }
     }
     
+    func resetStatisticalData() {
+        forEach { buddy in buddy.pickedCount = 0 }
+    }
+    
     private func onlyPresenet() -> Array<Buddy> {
         return filter { buddy in buddy.present }
     }
