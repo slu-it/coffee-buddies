@@ -79,14 +79,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="58J-ZL-s66">
-                                <rect key="frame" x="10" y="69" width="394" height="200.00000000000011"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="58J-ZL-s66">
+                                <rect key="frame" x="10" y="94" width="394" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="199.99999999999989" id="SPE-NZ-UAY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a method:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DME-0x-b8p">
-                                <rect key="frame" x="10" y="438" width="394" height="22"/>
+                                <rect key="frame" x="10" y="437" width="394" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Obv-Kj-qgt"/>
                                 </constraints>
@@ -137,26 +137,18 @@
                                     <constraint firstItem="hV6-Hz-urZ" firstAttribute="leading" secondItem="GFj-nX-d0d" secondAttribute="leading" id="HSP-ow-8kW"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Buddies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-yI-cx4">
-                                <rect key="frame" x="92" y="284" width="231.5" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CHA-yI-cx4" firstAttribute="top" secondItem="58J-ZL-s66" secondAttribute="bottom" constant="15.000000000000114" id="8LF-Hd-fqb"/>
                             <constraint firstItem="vEI-mo-cUR" firstAttribute="top" secondItem="ALT-bh-FAw" secondAttribute="bottom" constant="88" id="BK9-5S-78T"/>
                             <constraint firstItem="DME-0x-b8p" firstAttribute="leading" secondItem="vEI-mo-cUR" secondAttribute="leading" id="FPO-dM-ZwR"/>
                             <constraint firstItem="58J-ZL-s66" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FhU-UE-B6d"/>
                             <constraint firstItem="DME-0x-b8p" firstAttribute="trailing" secondItem="vEI-mo-cUR" secondAttribute="trailing" id="Jbf-hh-Rvx"/>
-                            <constraint firstItem="pUZ-z4-p7f" firstAttribute="top" secondItem="DME-0x-b8p" secondAttribute="bottom" constant="9" id="KJw-z4-9sa"/>
-                            <constraint firstItem="CHA-yI-cx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="KbI-uO-5X0"/>
+                            <constraint firstItem="pUZ-z4-p7f" firstAttribute="top" secondItem="DME-0x-b8p" secondAttribute="bottom" constant="10" id="KJw-z4-9sa"/>
                             <constraint firstItem="DME-0x-b8p" firstAttribute="centerX" secondItem="pUZ-z4-p7f" secondAttribute="centerX" id="Kwe-D6-5Iu"/>
                             <constraint firstItem="58J-ZL-s66" firstAttribute="leading" secondItem="DME-0x-b8p" secondAttribute="leading" id="QNu-ij-feK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vEI-mo-cUR" secondAttribute="bottom" constant="50" id="R8q-IK-z5U"/>
-                            <constraint firstItem="58J-ZL-s66" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="RoT-UY-hIq"/>
+                            <constraint firstItem="58J-ZL-s66" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="RoT-UY-hIq"/>
                             <constraint firstItem="ALT-bh-FAw" firstAttribute="top" secondItem="pUZ-z4-p7f" secondAttribute="bottom" constant="50" id="bYC-1O-NiQ"/>
                             <constraint firstItem="ALT-bh-FAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cIe-Id-YSZ"/>
                             <constraint firstItem="pUZ-z4-p7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="kB1-E5-TfR"/>
@@ -180,7 +172,7 @@
     </scenes>
     <resources>
         <image name="configuration_icon" width="25" height="25"/>
-        <image name="logo" width="810" height="729"/>
+        <image name="logo2" width="250" height="187"/>
         <image name="main_view_icon" width="25" height="25"/>
     </resources>
 </document>
