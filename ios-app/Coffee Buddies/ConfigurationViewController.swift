@@ -18,6 +18,11 @@ class ConfigurationViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        buddyListTableView.reloadData()
+        super.viewWillAppear(animated)
+    }
+    
 }
 
 private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {
@@ -38,7 +43,7 @@ private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {
         let buddy = buddyList[indexPath.row]
         
         if let label = cell.viewWithTag(NAME_LABEL_TAG) as? UILabel {
-            label.text = buddy.name
+            label.text = "\(buddy.name) (\(buddy.pickedTimes))"
         }
         
         if buddy.present {

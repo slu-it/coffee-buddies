@@ -14,17 +14,20 @@ class BuddySelectionViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func pickButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
-        switch methodSelector.selectedSegmentIndex {
-        case METHOD_RANDOM_INDEX: pickTwoRandomly()
-        case METHOD_TABLE_INDEX: pickOnePerTable()
-        case METHOD_INTERN_EXTERN_INDEX: pickOneInternAndOneExtern()
-        default: print("unkown method selected")
+    @IBAction func pickTwoBuddies() {
+        let methodIndex = methodSelector.selectedSegmentIndex
+        if methodIndex == METHOD_RANDOM_INDEX {
+            pickRandomly()
+        } else if methodIndex == METHOD_TABLE_INDEX {
+            pickOnePerTable()
+        } else if methodIndex == METHOD_INTERN_EXTERN_INDEX {
+            pickOneInternAndOneExtern()
         }
     }
     
-    private func pickTwoRandomly() {
+    private func pickRandomly() {
         let buddies = globalBuddyList.pick(amount: 2)
+        buddies.forEach { buddy in buddy.incrementPickedTimes() }
         
         if buddies.count == 2 {
             firstBuddyTextField.text = buddies[0].name
@@ -40,6 +43,7 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickOnePerTable() {
         let buddies = globalBuddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
+        buddies.values.forEach { buddy in buddy?.incrementPickedTimes() }
         
         if let buddy = buddies[TABLE_ONE] as? Buddy {
             firstBuddyTextField.text = buddy.name
@@ -56,6 +60,7 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickOneInternAndOneExtern() {
         let buddies = globalBuddyList.pick(groups: [INTERN, EXTERN])
+        buddies.values.forEach { buddy in buddy?.incrementPickedTimes() }
         
         if let buddy = buddies[INTERN] as? Buddy {
             firstBuddyTextField.text = buddy.name

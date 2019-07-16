@@ -92,13 +92,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="58J-ZL-s66">
-                                <rect key="frame" x="10" y="94" width="394" height="200"/>
+                                <rect key="frame" x="10" y="93.999999999999986" width="394" height="200.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="199.99999999999989" id="SPE-NZ-UAY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a method:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DME-0x-b8p">
-                                <rect key="frame" x="10" y="437" width="394" height="22"/>
+                                <rect key="frame" x="10" y="402" width="394" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Obv-Kj-qgt"/>
                                 </constraints>
@@ -106,16 +106,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEI-mo-cUR">
-                                <rect key="frame" x="10" y="727" width="394" height="36"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
-                                <state key="normal" title="Pick"/>
-                                <connections>
-                                    <action selector="pickButtonAction:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lkf-17-DpR"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pUZ-z4-p7f">
-                                <rect key="frame" x="25" y="469" width="364" height="29"/>
+                                <rect key="frame" x="25" y="434" width="364" height="29"/>
                                 <segments>
                                     <segment title="Random"/>
                                     <segment title="Tables"/>
@@ -123,7 +115,7 @@
                                 </segments>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ALT-bh-FAw">
-                                <rect key="frame" x="50" y="547" width="314" height="92"/>
+                                <rect key="frame" x="50" y="512" width="314" height="92"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Buddy" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hV6-Hz-urZ">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
@@ -149,18 +141,31 @@
                                     <constraint firstItem="hV6-Hz-urZ" firstAttribute="leading" secondItem="GFj-nX-d0d" secondAttribute="leading" id="HSP-ow-8kW"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-9e-XlF">
+                                <rect key="frame" x="10" y="727" width="394" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEI-mo-cUR">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Roll Dice"/>
+                                        <connections>
+                                            <action selector="pickTwoBuddies" destination="BYZ-38-t0r" eventType="touchUpInside" id="KRK-hL-3rt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vEI-mo-cUR" firstAttribute="top" secondItem="ALT-bh-FAw" secondAttribute="bottom" constant="88" id="BK9-5S-78T"/>
-                            <constraint firstItem="DME-0x-b8p" firstAttribute="leading" secondItem="vEI-mo-cUR" secondAttribute="leading" id="FPO-dM-ZwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rf1-9e-XlF" secondAttribute="trailing" constant="10" id="5n6-zd-cjU"/>
+                            <constraint firstItem="pUZ-z4-p7f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ajl-ss-rOr"/>
                             <constraint firstItem="58J-ZL-s66" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FhU-UE-B6d"/>
-                            <constraint firstItem="DME-0x-b8p" firstAttribute="trailing" secondItem="vEI-mo-cUR" secondAttribute="trailing" id="Jbf-hh-Rvx"/>
+                            <constraint firstItem="Rf1-9e-XlF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="I7v-w3-PR0"/>
                             <constraint firstItem="pUZ-z4-p7f" firstAttribute="top" secondItem="DME-0x-b8p" secondAttribute="bottom" constant="10" id="KJw-z4-9sa"/>
                             <constraint firstItem="DME-0x-b8p" firstAttribute="centerX" secondItem="pUZ-z4-p7f" secondAttribute="centerX" id="Kwe-D6-5Iu"/>
                             <constraint firstItem="58J-ZL-s66" firstAttribute="leading" secondItem="DME-0x-b8p" secondAttribute="leading" id="QNu-ij-feK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vEI-mo-cUR" secondAttribute="bottom" constant="50" id="R8q-IK-z5U"/>
                             <constraint firstItem="58J-ZL-s66" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="RoT-UY-hIq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rf1-9e-XlF" secondAttribute="bottom" constant="50" id="Yit-QR-w4v"/>
                             <constraint firstItem="ALT-bh-FAw" firstAttribute="top" secondItem="pUZ-z4-p7f" secondAttribute="bottom" constant="50" id="bYC-1O-NiQ"/>
                             <constraint firstItem="ALT-bh-FAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cIe-Id-YSZ"/>
                             <constraint firstItem="pUZ-z4-p7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="kB1-E5-TfR"/>
