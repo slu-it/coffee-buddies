@@ -5,21 +5,21 @@ class Buddy {
     let name: String
     let groups: Set<String>
     var present: Bool
-    var pickedTimes: Int
+    var pickedCount: Int
     
     init(name: String, groups: Set<String>) {
         self.name = name
         self.groups = groups
         self.present = true
-        self.pickedTimes = 0
+        self.pickedCount = 0
     }
     
     func switchPresent() {
         present = !present
     }
     
-    func incrementPickedTimes() {
-        pickedTimes += 1
+    func incrementPickedCount() {
+        pickedCount += 1
     }
     
 }

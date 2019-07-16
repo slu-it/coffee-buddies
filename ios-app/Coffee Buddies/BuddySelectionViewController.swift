@@ -27,7 +27,7 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickRandomly() {
         let buddies = globalBuddyList.pick(amount: 2)
-        buddies.forEach { buddy in buddy.incrementPickedTimes() }
+        buddies.forEach { buddy in buddy.incrementPickedCount() }
         
         if buddies.count == 2 {
             firstBuddyTextField.text = buddies[0].name
@@ -43,7 +43,7 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickOnePerTable() {
         let buddies = globalBuddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
-        buddies.values.forEach { buddy in buddy?.incrementPickedTimes() }
+        buddies.values.forEach { buddy in buddy?.incrementPickedCount() }
         
         if let buddy = buddies[TABLE_ONE] as? Buddy {
             firstBuddyTextField.text = buddy.name
@@ -60,7 +60,7 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickOneInternAndOneExtern() {
         let buddies = globalBuddyList.pick(groups: [INTERN, EXTERN])
-        buddies.values.forEach { buddy in buddy?.incrementPickedTimes() }
+        buddies.values.forEach { buddy in buddy?.incrementPickedCount() }
         
         if let buddy = buddies[INTERN] as? Buddy {
             firstBuddyTextField.text = buddy.name

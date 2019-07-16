@@ -43,7 +43,7 @@ private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {
         let buddy = buddyList[indexPath.row]
         
         if let label = cell.viewWithTag(NAME_LABEL_TAG) as? UILabel {
-            label.text = "\(buddy.name) (\(buddy.pickedTimes))"
+            label.text = "\(buddy.name) (\(buddy.pickedCount))"
         }
         
         if buddy.present {
