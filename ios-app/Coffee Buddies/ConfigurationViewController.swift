@@ -1,6 +1,7 @@
 import UIKit
 
 private let NAME_LABEL_TAG = 1000
+private let PICKED_LABEL_TAG = 1001
 
 class ConfigurationViewController: UIViewController {
     
@@ -57,7 +58,11 @@ private class BuddyListTableViewDataSource: NSObject, UITableViewDataSource {
         let buddy = buddyList[indexPath.row]
         
         if let label = cell.viewWithTag(NAME_LABEL_TAG) as? UILabel {
-            label.text = "\(buddy.name) (\(buddy.pickedCount))"
+            label.text = buddy.name
+        }
+        
+        if let label = cell.viewWithTag(PICKED_LABEL_TAG) as? UILabel {
+            label.text = "picked \(buddy.pickedCount) times"
         }
         
         if buddy.present {

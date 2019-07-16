@@ -22,25 +22,33 @@
                                 <rect key="frame" x="0.0" y="90" width="375" height="639"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="BuddyListItem" id="vOj-7z-Tpt">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="BuddyListItem" rowHeight="60" id="vOj-7z-Tpt">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOj-7z-Tpt" id="auE-ZG-NDe">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qi-Zj-xCN">
-                                                    <rect key="frame" x="15" y="8.0000000000000018" width="352" height="27.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Mustermann" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qi-Zj-xCN">
+                                                    <rect key="frame" x="15" y="8" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="picked 42 times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ain-0c-Z0s">
+                                                    <rect key="frame" x="16" y="31" width="304" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="2qi-Zj-xCN" secondAttribute="bottom" constant="8" id="bBL-X3-t4i"/>
+                                                <constraint firstItem="ain-0c-Z0s" firstAttribute="leading" secondItem="2qi-Zj-xCN" secondAttribute="leading" constant="1" id="k0N-ox-RJA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ain-0c-Z0s" secondAttribute="trailing" constant="8" id="oX1-Je-tTt"/>
                                                 <constraint firstItem="2qi-Zj-xCN" firstAttribute="top" secondItem="auE-ZG-NDe" secondAttribute="top" constant="8" id="pWJ-Yh-6a5"/>
                                                 <constraint firstItem="2qi-Zj-xCN" firstAttribute="leading" secondItem="auE-ZG-NDe" secondAttribute="leading" constant="15" id="prD-TG-Ik9"/>
                                                 <constraint firstAttribute="trailing" secondItem="2qi-Zj-xCN" secondAttribute="trailing" constant="8" id="q39-1j-3HW"/>
+                                                <constraint firstItem="ain-0c-Z0s" firstAttribute="top" secondItem="2qi-Zj-xCN" secondAttribute="bottom" constant="2" id="yYk-j3-783"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
