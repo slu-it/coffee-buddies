@@ -11,21 +11,19 @@ import XCTest
 
 class BuddyTests: XCTestCase {
 
-    let buddyList = BuddyList(
-        buddies: [
-            Buddy(name: "Matthias", groups: ["TABLE_ONE", "INTERN"]),
-            Buddy(name: "Barbara", groups: ["TABLE_ONE", "INTERN"]),
-            Buddy(name: "Dennis", groups: ["TABLE_ONE", "INTERN"]),
-            Buddy(name: "Stephan B.", groups: ["TABLE_ONE", "EXTERN"]),
-            Buddy(name: "Anja", groups: ["TABLE_ONE", "EXTERN"]),
-            Buddy(name: "Marco", groups: ["TABLE_ONE", "EXTERN"]),
-            Buddy(name: "Christian", groups: ["TABLE_TWO", "EXTERN"]),
-            Buddy(name: "Stefan L.", groups: ["TABLE_TWO", "EXTERN"]),
-            Buddy(name: "Stefan G.", groups: ["TABLE_TWO", "EXTERN"]),
-            Buddy(name: "Alexander", groups: ["TABLE_TWO", "INTERN"]),
-            Buddy(name: "Florian", groups: ["TABLE_TWO", "INTERN"]),
-            Buddy(name: "Mareike", groups: ["TABLE_TWO", "INTERN"])
-        ]
+    let buddyList = Array<Buddy>(arrayLiteral:
+        Buddy(name: "Matthias", groups: ["TABLE_ONE", "INTERN"]),
+        Buddy(name: "Barbara", groups: ["TABLE_ONE", "INTERN"]),
+        Buddy(name: "Dennis", groups: ["TABLE_ONE", "INTERN"]),
+        Buddy(name: "Stephan B.", groups: ["TABLE_ONE", "EXTERN"]),
+        Buddy(name: "Anja", groups: ["TABLE_ONE", "EXTERN"]),
+        Buddy(name: "Marco", groups: ["TABLE_ONE", "EXTERN"]),
+        Buddy(name: "Christian", groups: ["TABLE_TWO", "EXTERN"]),
+        Buddy(name: "Stefan L.", groups: ["TABLE_TWO", "EXTERN"]),
+        Buddy(name: "Stefan G.", groups: ["TABLE_TWO", "EXTERN"]),
+        Buddy(name: "Alexander", groups: ["TABLE_TWO", "INTERN"]),
+        Buddy(name: "Florian", groups: ["TABLE_TWO", "INTERN"]),
+        Buddy(name: "Mareike", groups: ["TABLE_TWO", "INTERN"])
     )
     
     func testPickAmount() {
