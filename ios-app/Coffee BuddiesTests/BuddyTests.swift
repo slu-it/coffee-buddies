@@ -43,10 +43,10 @@ class BuddyTests: XCTestCase {
     private func pickAmountAndReturnStandardDeviation(_ repetitions: Int) -> Double {
         let amountOfPicks = 2
         
-        var buddyToCount = [Buddy:Int]()
+        var buddyToCount = [String:Int]()
         repeated(times: repetitions) {
             let pick = buddyList.pick(amount: amountOfPicks)
-            for buddy in pick { buddyToCount[buddy] = (buddyToCount[buddy] ?? 0) + 1 }
+            for buddy in pick { buddyToCount[buddy.name] = (buddyToCount[buddy.name] ?? 0) + 1 }
         }
         let buddyToPercentage = buddyToCount.percentages(repetitions * amountOfPicks)
         
@@ -70,10 +70,10 @@ class BuddyTests: XCTestCase {
     private func pickGroupAndReturnStandardDeviation(_ repetitions: Int) -> Double {
         let groups: Set<String> = ["INTERN", "EXTERN"]
         
-        var buddyToCount = [Buddy:Int]()
+        var buddyToCount = [String:Int]()
         repeated(times: repetitions) {
             let pick = buddyList.pick(groups: groups)
-            for (_, buddy) in pick { buddyToCount[buddy] = (buddyToCount[buddy] ?? 0) + 1 }
+            for (_, buddy) in pick { buddyToCount[buddy.name] = (buddyToCount[buddy.name] ?? 0) + 1 }
         }
         let buddyToPercentage = buddyToCount.percentages(repetitions * groups.count)
         

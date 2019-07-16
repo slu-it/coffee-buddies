@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A532B1822DD26F200BF5A45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A532B1722DD26F200BF5A45 /* MainViewController.swift */; };
+		0A532B1A22DD270100BF5A45 /* BuddyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A532B1922DD270100BF5A45 /* BuddyList.swift */; };
+		0A532B1C22DD276400BF5A45 /* BuddyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A532B1B22DD276400BF5A45 /* BuddyListViewController.swift */; };
 		0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */; };
-		0A7D8A1722D9EABC00D460D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1622D9EABC00D460D0 /* ViewController.swift */; };
 		0A7D8A1A22D9EABC00D460D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1822D9EABC00D460D0 /* Main.storyboard */; };
 		0A7D8A1C22D9EABE00D460D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */; };
 		0A7D8A1F22D9EABE00D460D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1D22D9EABE00D460D0 /* LaunchScreen.storyboard */; };
 		0A7D8A2A22D9EABF00D460D0 /* Coffee_BuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A2922D9EABF00D460D0 /* Coffee_BuddiesTests.swift */; };
 		0A7D8A3522D9EABF00D460D0 /* Coffee_BuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A3422D9EABF00D460D0 /* Coffee_BuddiesUITests.swift */; };
-		0A7D8A4322D9EBEA00D460D0 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A4222D9EBEA00D460D0 /* Buddy.swift */; };
 		0A7D8A4522D9F09000D460D0 /* BuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A4422D9F09000D460D0 /* BuddyTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A532B1722DD26F200BF5A45 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0A532B1922DD270100BF5A45 /* BuddyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyList.swift; sourceTree = "<group>"; };
+		0A532B1B22DD276400BF5A45 /* BuddyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyListViewController.swift; sourceTree = "<group>"; };
 		0A7D8A1122D9EABC00D460D0 /* Coffee Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Buddies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A7D8A1622D9EABC00D460D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A7D8A1922D9EABC00D460D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A7D8A1E22D9EABE00D460D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,7 +52,6 @@
 		0A7D8A3022D9EABF00D460D0 /* Coffee BuddiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee BuddiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D8A3422D9EABF00D460D0 /* Coffee_BuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_BuddiesUITests.swift; sourceTree = "<group>"; };
 		0A7D8A3622D9EABF00D460D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7D8A4222D9EBEA00D460D0 /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
 		0A7D8A4422D9F09000D460D0 /* BuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,12 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */,
-				0A7D8A1622D9EABC00D460D0 /* ViewController.swift */,
 				0A7D8A1822D9EABC00D460D0 /* Main.storyboard */,
 				0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */,
 				0A7D8A1D22D9EABE00D460D0 /* LaunchScreen.storyboard */,
 				0A7D8A2022D9EABE00D460D0 /* Info.plist */,
-				0A7D8A4222D9EBEA00D460D0 /* Buddy.swift */,
+				0A532B1722DD26F200BF5A45 /* MainViewController.swift */,
+				0A532B1922DD270100BF5A45 /* BuddyList.swift */,
+				0A532B1B22DD276400BF5A45 /* BuddyListViewController.swift */,
 			);
 			path = "Coffee Buddies";
 			sourceTree = "<group>";
@@ -262,9 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7D8A1722D9EABC00D460D0 /* ViewController.swift in Sources */,
-				0A7D8A4322D9EBEA00D460D0 /* Buddy.swift in Sources */,
+				0A532B1A22DD270100BF5A45 /* BuddyList.swift in Sources */,
 				0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */,
+				0A532B1C22DD276400BF5A45 /* BuddyListViewController.swift in Sources */,
+				0A532B1822DD26F200BF5A45 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.slu-it.Coffee-Buddies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.slu-it.Coffee-Buddies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
