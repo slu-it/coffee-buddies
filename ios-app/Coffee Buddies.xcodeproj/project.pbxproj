@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4786C522DE5A1200C52241 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786C422DE5A1200C52241 /* ConfigurationViewController.swift */; };
 		0A532B1822DD26F200BF5A45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A532B1722DD26F200BF5A45 /* MainViewController.swift */; };
 		0A532B1A22DD270100BF5A45 /* BuddyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A532B1922DD270100BF5A45 /* BuddyList.swift */; };
-		0A532B1C22DD276400BF5A45 /* BuddyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A532B1B22DD276400BF5A45 /* BuddyListViewController.swift */; };
 		0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */; };
 		0A7D8A1A22D9EABC00D460D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1822D9EABC00D460D0 /* Main.storyboard */; };
 		0A7D8A1C22D9EABE00D460D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */; };
@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4786C422DE5A1200C52241 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		0A532B1722DD26F200BF5A45 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0A532B1922DD270100BF5A45 /* BuddyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyList.swift; sourceTree = "<group>"; };
-		0A532B1B22DD276400BF5A45 /* BuddyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyListViewController.swift; sourceTree = "<group>"; };
 		0A7D8A1122D9EABC00D460D0 /* Coffee Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Buddies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A7D8A1922D9EABC00D460D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				0A7D8A2022D9EABE00D460D0 /* Info.plist */,
 				0A532B1722DD26F200BF5A45 /* MainViewController.swift */,
 				0A532B1922DD270100BF5A45 /* BuddyList.swift */,
-				0A532B1B22DD276400BF5A45 /* BuddyListViewController.swift */,
+				0A4786C422DE5A1200C52241 /* ConfigurationViewController.swift */,
 			);
 			path = "Coffee Buddies";
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			files = (
 				0A532B1A22DD270100BF5A45 /* BuddyList.swift in Sources */,
 				0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */,
-				0A532B1C22DD276400BF5A45 /* BuddyListViewController.swift in Sources */,
+				0A4786C522DE5A1200C52241 /* ConfigurationViewController.swift in Sources */,
 				0A532B1822DD26F200BF5A45 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
