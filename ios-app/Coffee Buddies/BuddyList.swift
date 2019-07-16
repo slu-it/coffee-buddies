@@ -7,7 +7,7 @@ let EXTERN = "EXTERN"
 
 // initial data when app starts
 // TODO: put into database
-let buddyList = BuddyList(
+let globalBuddyList = BuddyList(
     buddies: [
         Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
         Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN]),
@@ -26,12 +26,18 @@ let buddyList = BuddyList(
 
 class BuddyList {
     
-    private var randomNumberGenerator = SystemRandomNumberGenerator()
-    
-    let buddies: Array<Buddy>
+    private let buddies: Array<Buddy>
     
     init(buddies: Array<Buddy>) {
         self.buddies = buddies
+    }
+    
+    func count() -> Int {
+        return buddies.count
+    }
+    
+    func getBuddyAt(index: Int) -> Buddy {
+        return buddies[index]
     }
     
     func pick(amount: Int) -> Array<Buddy> {
@@ -59,6 +65,7 @@ class BuddyList {
 }
 
 class Buddy {
+    
     let name: String
     let groups: Set<String>
     var present: Bool
@@ -72,4 +79,5 @@ class Buddy {
     func switchPresent() {
         present = !present
     }
+    
 }

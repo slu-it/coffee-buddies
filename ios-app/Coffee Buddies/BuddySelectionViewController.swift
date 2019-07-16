@@ -12,7 +12,6 @@ class BuddySelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MainViewController loaded")
     }
     
     @IBAction func pickButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
@@ -25,7 +24,7 @@ class BuddySelectionViewController: UIViewController {
     }
     
     private func pickTwoRandomly() {
-        let buddies = Array(buddyList.pick(amount: 2))
+        let buddies = Array(globalBuddyList.pick(amount: 2))
         
         if buddies.count == 2 {
             firstBuddyTextField.text = buddies[0].name
@@ -40,7 +39,7 @@ class BuddySelectionViewController: UIViewController {
     }
     
     private func pickOnePerTable() {
-        let buddies = buddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
+        let buddies = globalBuddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
         
         if let buddy = buddies[TABLE_ONE] as? Buddy {
             firstBuddyTextField.text = buddy.name
@@ -56,7 +55,7 @@ class BuddySelectionViewController: UIViewController {
     }
     
     private func pickOneInternAndOneExtern() {
-        let buddies = buddyList.pick(groups: [INTERN, EXTERN])
+        let buddies = globalBuddyList.pick(groups: [INTERN, EXTERN])
         
         if let buddy = buddies[INTERN] as? Buddy {
             firstBuddyTextField.text = buddy.name
