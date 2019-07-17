@@ -1,46 +1,66 @@
-//
-//  AppDelegate.swift
-//  Coffee Buddies
-//
-//  Created by Stefan on 13.07.19.
-//  Copyright © 2019 Stefan Ludwig. All rights reserved.
-//
 
 import UIKit
+
+let TABLE_ONE = "TABLE_ONE"
+let TABLE_TWO = "TABLE_TWO"
+let INTERN = "INTERN"
+let EXTERN = "EXTERN"
+
+let globalBuddyList = Array(arrayLiteral:
+    Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN]),
+    Buddy(name: "Anja", groups: [TABLE_ONE, EXTERN]),
+    Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Christian", groups: [TABLE_TWO, EXTERN]),
+    Buddy(name: "Dennis", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Florian", groups: [TABLE_TWO, INTERN]),
+    Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN]),
+    Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN]),
+    Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),
+    Buddy(name: "Stefan L.", groups: [TABLE_TWO, EXTERN]),
+    Buddy(name: "Stephan B.", groups: [TABLE_ONE, EXTERN])
+)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        loadTransientBuddyProperties()
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        saveTransientBuddyProperties()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        saveTransientBuddyProperties()
     }
 
+    private func saveTransientBuddyProperties() {
+        globalBuddyList.forEach { buddy in
+            var dictionary = [String : Any]()
 
+            dictionary["present"] = buddy.present
+            dictionary["pickedCount"] = buddy.pickedCount
+            
+            UserDefaults.standard.set(dictionary, forKey: keyOf(buddy))
+        }
+    }
+    
+    private func loadTransientBuddyProperties() {
+        globalBuddyList.forEach { buddy in
+            let dictionary = UserDefaults.standard.dictionary(forKey: keyOf(buddy)) ?? [String:Any]()
+            
+            buddy.pickedCount = dictionary["pickedCount"] as? Int ?? 0
+            buddy.present = dictionary["present"] as? Bool ?? true
+        }
+    }
+    
+    private func keyOf(_ buddy: Buddy) -> String {
+        return "buddy[\(buddy.name)]"
+    }
+    
 }
-

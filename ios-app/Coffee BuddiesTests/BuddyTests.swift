@@ -11,21 +11,19 @@ import XCTest
 
 class BuddyTests: XCTestCase {
 
-    let buddyList = BuddyList(
-        buddies: [
-            Buddy(name: "Matthias", groups: ["TABLE_ONE", "INTERN"]),
-            Buddy(name: "Barbara", groups: ["TABLE_ONE", "INTERN"]),
-            Buddy(name: "Dennis", groups: ["TABLE_ONE", "INTERN"]),
-            Buddy(name: "Stephan B.", groups: ["TABLE_ONE", "EXTERN"]),
-            Buddy(name: "Anja", groups: ["TABLE_ONE", "EXTERN"]),
-            Buddy(name: "Marco", groups: ["TABLE_ONE", "EXTERN"]),
-            Buddy(name: "Christian", groups: ["TABLE_TWO", "EXTERN"]),
-            Buddy(name: "Stefan L.", groups: ["TABLE_TWO", "EXTERN"]),
-            Buddy(name: "Stefan G.", groups: ["TABLE_TWO", "EXTERN"]),
-            Buddy(name: "Alexander", groups: ["TABLE_TWO", "INTERN"]),
-            Buddy(name: "Florian", groups: ["TABLE_TWO", "INTERN"]),
-            Buddy(name: "Mareike", groups: ["TABLE_TWO", "INTERN"])
-        ]
+    let buddyList = Array<Buddy>(arrayLiteral:
+        Buddy(name: "Matthias", groups: ["TABLE_ONE", "INTERN"]),
+        Buddy(name: "Barbara", groups: ["TABLE_ONE", "INTERN"]),
+        Buddy(name: "Dennis", groups: ["TABLE_ONE", "INTERN"]),
+        Buddy(name: "Stephan B.", groups: ["TABLE_ONE", "EXTERN"]),
+        Buddy(name: "Anja", groups: ["TABLE_ONE", "EXTERN"]),
+        Buddy(name: "Marco", groups: ["TABLE_ONE", "EXTERN"]),
+        Buddy(name: "Christian", groups: ["TABLE_TWO", "EXTERN"]),
+        Buddy(name: "Stefan L.", groups: ["TABLE_TWO", "EXTERN"]),
+        Buddy(name: "Stefan G.", groups: ["TABLE_TWO", "EXTERN"]),
+        Buddy(name: "Alexander", groups: ["TABLE_TWO", "INTERN"]),
+        Buddy(name: "Florian", groups: ["TABLE_TWO", "INTERN"]),
+        Buddy(name: "Mareike", groups: ["TABLE_TWO", "INTERN"])
     )
     
     func testPickAmount() {
@@ -43,10 +41,10 @@ class BuddyTests: XCTestCase {
     private func pickAmountAndReturnStandardDeviation(_ repetitions: Int) -> Double {
         let amountOfPicks = 2
         
-        var buddyToCount = [Buddy:Int]()
+        var buddyToCount = [String:Int]()
         repeated(times: repetitions) {
             let pick = buddyList.pick(amount: amountOfPicks)
-            for buddy in pick { buddyToCount[buddy] = (buddyToCount[buddy] ?? 0) + 1 }
+            for buddy in pick { buddyToCount[buddy.name] = (buddyToCount[buddy.name] ?? 0) + 1 }
         }
         let buddyToPercentage = buddyToCount.percentages(repetitions * amountOfPicks)
         
@@ -56,7 +54,7 @@ class BuddyTests: XCTestCase {
     func testPickPerGroup() {
         repeated(times: 10) {
             let picks = buddyList.pick(groups: ["INTERN", "EXTERN"])
-                .map { group, buddy in "\(group): \(buddy.name)" }
+                .map { group, buddy in "\(group): \(buddy!.name)" }
             print(picks)
         }
     }
@@ -70,10 +68,10 @@ class BuddyTests: XCTestCase {
     private func pickGroupAndReturnStandardDeviation(_ repetitions: Int) -> Double {
         let groups: Set<String> = ["INTERN", "EXTERN"]
         
-        var buddyToCount = [Buddy:Int]()
+        var buddyToCount = [String:Int]()
         repeated(times: repetitions) {
             let pick = buddyList.pick(groups: groups)
-            for (_, buddy) in pick { buddyToCount[buddy] = (buddyToCount[buddy] ?? 0) + 1 }
+            for (_, buddy) in pick { buddyToCount[buddy!.name] = (buddyToCount[buddy!.name] ?? 0) + 1 }
         }
         let buddyToPercentage = buddyToCount.percentages(repetitions * groups.count)
         

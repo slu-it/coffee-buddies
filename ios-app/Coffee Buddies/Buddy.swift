@@ -1,44 +1,25 @@
-//
-//  Buddy.swift
-//  Coffee Buddies
-//
-//  Created by Stefan on 13.07.19.
-//  Copyright © 2019 Stefan Ludwig. All rights reserved.
-//
-
 import Foundation
 
-struct Buddy : Hashable {
-    var name: String
-    var groups: Set<String>
-}
-
-class BuddyList {
+class Buddy {
     
-    private var randomNumberGenerator = SystemRandomNumberGenerator()
+    let name: String
+    let groups: Set<String>
+    var present: Bool
+    var pickedCount: Int
     
-    let buddies: Array<Buddy>
-    
-    init(buddies: Array<Buddy>) {
-        self.buddies = buddies
+    init(name: String, groups: Set<String>) {
+        self.name = name
+        self.groups = groups
+        self.present = true
+        self.pickedCount = 0
     }
     
-    func pick(amount: Int) -> Set<Buddy> {
-        let shuffled = buddies.shuffled()
-        return Set(shuffled.prefix(amount))
+    func switchPresent() {
+        present = !present
     }
     
-    func pick(groups: Set<String>) -> Dictionary<String, Buddy> {
-        var buddiesByGroup = Dictionary<String, Set<Buddy>>()
-        for group in groups { buddiesByGroup[group] = Set<Buddy>() }
-        
-        for buddy in buddies {
-            for group in buddy.groups {
-                buddiesByGroup[group]?.insert(buddy)
-            }
-        }
-        
-        return buddiesByGroup.mapValues { buddies in buddies.randomElement()! }
+    func incrementPickedCount() {
+        pickedCount += 1
     }
     
 }

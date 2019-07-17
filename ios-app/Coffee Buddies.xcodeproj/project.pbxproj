@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4786C522DE5A1200C52241 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786C422DE5A1200C52241 /* ConfigurationViewController.swift */; };
+		0A4786C722DE5AE000C52241 /* BuddySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786C622DE5AE000C52241 /* BuddySelectionViewController.swift */; };
+		0A4786C922DE612800C52241 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786C822DE612800C52241 /* Buddy.swift */; };
+		0A4786CB22DE62ED00C52241 /* BuddyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786CA22DE62ED00C52241 /* BuddyExtensions.swift */; };
 		0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */; };
-		0A7D8A1722D9EABC00D460D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1622D9EABC00D460D0 /* ViewController.swift */; };
 		0A7D8A1A22D9EABC00D460D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1822D9EABC00D460D0 /* Main.storyboard */; };
 		0A7D8A1C22D9EABE00D460D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */; };
 		0A7D8A1F22D9EABE00D460D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1D22D9EABE00D460D0 /* LaunchScreen.storyboard */; };
-		0A7D8A2A22D9EABF00D460D0 /* Coffee_BuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A2922D9EABF00D460D0 /* Coffee_BuddiesTests.swift */; };
-		0A7D8A3522D9EABF00D460D0 /* Coffee_BuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A3422D9EABF00D460D0 /* Coffee_BuddiesUITests.swift */; };
-		0A7D8A4322D9EBEA00D460D0 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A4222D9EBEA00D460D0 /* Buddy.swift */; };
 		0A7D8A4522D9F09000D460D0 /* BuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A4422D9F09000D460D0 /* BuddyTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,30 +26,21 @@
 			remoteGlobalIDString = 0A7D8A1022D9EABC00D460D0;
 			remoteInfo = "Coffee Buddies";
 		};
-		0A7D8A3122D9EABF00D460D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A7D8A0922D9EABC00D460D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A7D8A1022D9EABC00D460D0;
-			remoteInfo = "Coffee Buddies";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4786C422DE5A1200C52241 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		0A4786C622DE5AE000C52241 /* BuddySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddySelectionViewController.swift; sourceTree = "<group>"; };
+		0A4786C822DE612800C52241 /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
+		0A4786CA22DE62ED00C52241 /* BuddyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyExtensions.swift; sourceTree = "<group>"; };
 		0A7D8A1122D9EABC00D460D0 /* Coffee Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Buddies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A7D8A1622D9EABC00D460D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A7D8A1922D9EABC00D460D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A7D8A1E22D9EABE00D460D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A7D8A2022D9EABE00D460D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A7D8A2522D9EABF00D460D0 /* Coffee BuddiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee BuddiesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A7D8A2922D9EABF00D460D0 /* Coffee_BuddiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_BuddiesTests.swift; sourceTree = "<group>"; };
 		0A7D8A2B22D9EABF00D460D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7D8A3022D9EABF00D460D0 /* Coffee BuddiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee BuddiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A7D8A3422D9EABF00D460D0 /* Coffee_BuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_BuddiesUITests.swift; sourceTree = "<group>"; };
-		0A7D8A3622D9EABF00D460D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7D8A4222D9EBEA00D460D0 /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
 		0A7D8A4422D9F09000D460D0 /* BuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,13 +59,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A7D8A2D22D9EABF00D460D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +67,6 @@
 			children = (
 				0A7D8A1322D9EABC00D460D0 /* Coffee Buddies */,
 				0A7D8A2822D9EABF00D460D0 /* Coffee BuddiesTests */,
-				0A7D8A3322D9EABF00D460D0 /* Coffee BuddiesUITests */,
 				0A7D8A1222D9EABC00D460D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +76,6 @@
 			children = (
 				0A7D8A1122D9EABC00D460D0 /* Coffee Buddies.app */,
 				0A7D8A2522D9EABF00D460D0 /* Coffee BuddiesTests.xctest */,
-				0A7D8A3022D9EABF00D460D0 /* Coffee BuddiesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,12 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */,
-				0A7D8A1622D9EABC00D460D0 /* ViewController.swift */,
 				0A7D8A1822D9EABC00D460D0 /* Main.storyboard */,
 				0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */,
 				0A7D8A1D22D9EABE00D460D0 /* LaunchScreen.storyboard */,
 				0A7D8A2022D9EABE00D460D0 /* Info.plist */,
-				0A7D8A4222D9EBEA00D460D0 /* Buddy.swift */,
+				0A4786C422DE5A1200C52241 /* ConfigurationViewController.swift */,
+				0A4786C622DE5AE000C52241 /* BuddySelectionViewController.swift */,
+				0A4786C822DE612800C52241 /* Buddy.swift */,
+				0A4786CA22DE62ED00C52241 /* BuddyExtensions.swift */,
 			);
 			path = "Coffee Buddies";
 			sourceTree = "<group>";
@@ -115,20 +99,10 @@
 		0A7D8A2822D9EABF00D460D0 /* Coffee BuddiesTests */ = {
 			isa = PBXGroup;
 			children = (
-				0A7D8A2922D9EABF00D460D0 /* Coffee_BuddiesTests.swift */,
 				0A7D8A2B22D9EABF00D460D0 /* Info.plist */,
 				0A7D8A4422D9F09000D460D0 /* BuddyTests.swift */,
 			);
 			path = "Coffee BuddiesTests";
-			sourceTree = "<group>";
-		};
-		0A7D8A3322D9EABF00D460D0 /* Coffee BuddiesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0A7D8A3422D9EABF00D460D0 /* Coffee_BuddiesUITests.swift */,
-				0A7D8A3622D9EABF00D460D0 /* Info.plist */,
-			);
-			path = "Coffee BuddiesUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,24 +143,6 @@
 			productReference = 0A7D8A2522D9EABF00D460D0 /* Coffee BuddiesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0A7D8A2F22D9EABF00D460D0 /* Coffee BuddiesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A7D8A3F22D9EABF00D460D0 /* Build configuration list for PBXNativeTarget "Coffee BuddiesUITests" */;
-			buildPhases = (
-				0A7D8A2C22D9EABF00D460D0 /* Sources */,
-				0A7D8A2D22D9EABF00D460D0 /* Frameworks */,
-				0A7D8A2E22D9EABF00D460D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0A7D8A3222D9EABF00D460D0 /* PBXTargetDependency */,
-			);
-			name = "Coffee BuddiesUITests";
-			productName = "Coffee BuddiesUITests";
-			productReference = 0A7D8A3022D9EABF00D460D0 /* Coffee BuddiesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,10 +157,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					0A7D8A2422D9EABF00D460D0 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 0A7D8A1022D9EABC00D460D0;
-					};
-					0A7D8A2F22D9EABF00D460D0 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 0A7D8A1022D9EABC00D460D0;
 					};
@@ -225,7 +177,6 @@
 			targets = (
 				0A7D8A1022D9EABC00D460D0 /* Coffee Buddies */,
 				0A7D8A2422D9EABF00D460D0 /* Coffee BuddiesTests */,
-				0A7D8A2F22D9EABF00D460D0 /* Coffee BuddiesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,13 +199,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A7D8A2E22D9EABF00D460D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,9 +206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7D8A1722D9EABC00D460D0 /* ViewController.swift in Sources */,
-				0A7D8A4322D9EBEA00D460D0 /* Buddy.swift in Sources */,
+				0A4786C922DE612800C52241 /* Buddy.swift in Sources */,
 				0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */,
+				0A4786CB22DE62ED00C52241 /* BuddyExtensions.swift in Sources */,
+				0A4786C722DE5AE000C52241 /* BuddySelectionViewController.swift in Sources */,
+				0A4786C522DE5A1200C52241 /* ConfigurationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,15 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A7D8A4522D9F09000D460D0 /* BuddyTests.swift in Sources */,
-				0A7D8A2A22D9EABF00D460D0 /* Coffee_BuddiesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A7D8A2C22D9EABF00D460D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A7D8A3522D9EABF00D460D0 /* Coffee_BuddiesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +229,6 @@
 			isa = PBXTargetDependency;
 			target = 0A7D8A1022D9EABC00D460D0 /* Coffee Buddies */;
 			targetProxy = 0A7D8A2622D9EABF00D460D0 /* PBXContainerItemProxy */;
-		};
-		0A7D8A3222D9EABF00D460D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A7D8A1022D9EABC00D460D0 /* Coffee Buddies */;
-			targetProxy = 0A7D8A3122D9EABF00D460D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,7 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.slu-it.Coffee-Buddies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.slu-it.Coffee-Buddies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -518,50 +450,6 @@
 			};
 			name = Release;
 		};
-		0A7D8A4022D9EABF00D460D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TMQ97JDK29;
-				INFOPLIST_FILE = "Coffee BuddiesUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SLU-IT.Coffee-BuddiesUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Coffee Buddies";
-			};
-			name = Debug;
-		};
-		0A7D8A4122D9EABF00D460D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TMQ97JDK29;
-				INFOPLIST_FILE = "Coffee BuddiesUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SLU-IT.Coffee-BuddiesUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Coffee Buddies";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +476,6 @@
 			buildConfigurations = (
 				0A7D8A3D22D9EABF00D460D0 /* Debug */,
 				0A7D8A3E22D9EABF00D460D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A7D8A3F22D9EABF00D460D0 /* Build configuration list for PBXNativeTarget "Coffee BuddiesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A7D8A4022D9EABF00D460D0 /* Debug */,
-				0A7D8A4122D9EABF00D460D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
