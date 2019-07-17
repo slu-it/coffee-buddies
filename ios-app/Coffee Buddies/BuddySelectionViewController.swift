@@ -58,7 +58,6 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickOnePerTable() {
         let buddies = globalBuddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
-        buddies.values.forEach { buddy in buddy?.incrementPickedCount() }
         
         if let buddy = buddies[TABLE_ONE] as? Buddy {
             lastPickedBuddies.append(buddy)
@@ -77,7 +76,6 @@ class BuddySelectionViewController: UIViewController {
     
     private func pickOneInternAndOneExtern() {
         let buddies = globalBuddyList.pick(groups: [INTERN, EXTERN])
-        buddies.values.forEach { buddy in buddy?.incrementPickedCount() }
         
         if let buddy = buddies[INTERN] as? Buddy {
             lastPickedBuddies.append(buddy)
