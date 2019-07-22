@@ -11,6 +11,7 @@
 		0A4786C722DE5AE000C52241 /* BuddySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786C622DE5AE000C52241 /* BuddySelectionViewController.swift */; };
 		0A4786C922DE612800C52241 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786C822DE612800C52241 /* Buddy.swift */; };
 		0A4786CB22DE62ED00C52241 /* BuddyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4786CA22DE62ED00C52241 /* BuddyExtensions.swift */; };
+		0A756FF722E641D80072309C /* MethodPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A756FF622E641D80072309C /* MethodPickerViewController.swift */; };
 		0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */; };
 		0A7D8A1A22D9EABC00D460D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1822D9EABC00D460D0 /* Main.storyboard */; };
 		0A7D8A1C22D9EABE00D460D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D8A1B22D9EABE00D460D0 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		0A4786C622DE5AE000C52241 /* BuddySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddySelectionViewController.swift; sourceTree = "<group>"; };
 		0A4786C822DE612800C52241 /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
 		0A4786CA22DE62ED00C52241 /* BuddyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyExtensions.swift; sourceTree = "<group>"; };
+		0A756FF622E641D80072309C /* MethodPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodPickerViewController.swift; sourceTree = "<group>"; };
 		0A7D8A1122D9EABC00D460D0 /* Coffee Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Buddies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D8A1422D9EABC00D460D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A7D8A1922D9EABC00D460D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				0A4786C622DE5AE000C52241 /* BuddySelectionViewController.swift */,
 				0A4786C822DE612800C52241 /* Buddy.swift */,
 				0A4786CA22DE62ED00C52241 /* BuddyExtensions.swift */,
+				0A756FF622E641D80072309C /* MethodPickerViewController.swift */,
 			);
 			path = "Coffee Buddies";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				0A4786C922DE612800C52241 /* Buddy.swift in Sources */,
 				0A7D8A1522D9EABC00D460D0 /* AppDelegate.swift in Sources */,
+				0A756FF722E641D80072309C /* MethodPickerViewController.swift in Sources */,
 				0A4786CB22DE62ED00C52241 /* BuddyExtensions.swift in Sources */,
 				0A4786C722DE5AE000C52241 /* BuddySelectionViewController.swift in Sources */,
 				0A4786C522DE5A1200C52241 /* ConfigurationViewController.swift in Sources */,

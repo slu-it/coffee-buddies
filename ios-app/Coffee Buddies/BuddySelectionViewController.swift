@@ -1,32 +1,29 @@
 import UIKit
 
-private let METHOD_RANDOM_INDEX = 0
-private let METHOD_TABLE_INDEX = 1
-private let METHOD_INTERN_EXTERN_INDEX = 2
-
 class BuddySelectionViewController: UIViewController {
     
-    @IBOutlet weak var methodSelector: UISegmentedControl!
+    @IBOutlet weak var methodPicker: UIPickerView!
     @IBOutlet weak var firstBuddyTextField: UITextField!
     @IBOutlet weak var secondBuddyTextField: UITextField!
     @IBOutlet weak var pickButton: UIButton!
     
+    private var methodPickerViewController = MethodPickerViewController()
     private var lastPickedBuddies = Array<Buddy>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        methodPicker.dataSource = methodPickerViewController
+        methodPicker.delegate = methodPickerViewController
+        methodPicker.selectRow(1, inComponent: 0, animated: true)
     }
     
     @IBAction func pickTwoBuddies() {
         lastPickedBuddies.removeAll()
         
-        let methodIndex = methodSelector.selectedSegmentIndex
-        if methodIndex == METHOD_RANDOM_INDEX {
-            pickRandomly()
-        } else if methodIndex == METHOD_TABLE_INDEX {
-            pickOnePerTable()
-        } else if methodIndex == METHOD_INTERN_EXTERN_INDEX {
-            pickOneInternAndOneExtern()
+        switch methodPickerViewController.getSelectedMethod() {
+            case .Random: pickRandomly()
+            case .Tables: pickOnePerTable()
+            case .InternExtern: pickOneInternAndOneExtern()
         }
         
         if lastPickedBuddies.count == 2 {
