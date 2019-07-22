@@ -1,13 +1,18 @@
 import UIKit
 
-let METHOD_RANDOM_INDEX = 0
-let METHOD_TABLE_INDEX = 1
-let METHOD_INTERN_EXTERN_INDEX = 2
-
 class MethodPickerViewController : NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    private let dataModel: [Method] = [.Tables, .Random, .InternExtern]
-    private var currentSelection: Method = .Random
+    private var dataModel: [Method]
+    private var currentSelection: Method
+    
+    // TODO: refresh mechanism if data model is dynamic
+    override init() {
+        dataModel = Array(arrayLiteral: RandomMethod())
+        for groupCategory in getGroupCategories() {
+            dataModel.append(GroupBasedMethod(groupCategory))
+        }
+        currentSelection = dataModel[0]
+    }
     
     func getSelectedMethod() -> Method {
         return currentSelection
@@ -22,17 +27,11 @@ class MethodPickerViewController : NSObject, UIPickerViewDelegate, UIPickerViewD
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataModel[row].rawValue
+        return dataModel[row].getLabel()
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentSelection = dataModel[row]
     }
     
-}
-
-enum Method : String {
-    case Random = "Random"
-    case Tables = "Tables"
-    case InternExtern = "Intern + Extern"
 }
