@@ -11,8 +11,8 @@ class ConfigurationViewController: UIViewController {
     @IBOutlet weak var buddyListTableView: UITableView!
     
     override func viewDidLoad() {
-        buddyListTableViewDataSource = BuddyListTableViewDataSource(globalBuddyList)
-        buddyListTableViewDelegate = BuddyListTableViewDelegate(globalBuddyList)
+        buddyListTableViewDataSource = BuddyListTableViewDataSource(getBuddyList())
+        buddyListTableViewDelegate = BuddyListTableViewDelegate(getBuddyList())
         
         buddyListTableView.dataSource = buddyListTableViewDataSource
         buddyListTableView.delegate = buddyListTableViewDelegate
@@ -26,7 +26,7 @@ class ConfigurationViewController: UIViewController {
     
     @IBAction func resetStatistics() {
         let okAction = UIAlertAction(title: "Ok", style: .default) { action in
-            globalBuddyList.resetStatisticalData()
+            getBuddyList().resetStatisticalData()
             self.buddyListTableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)

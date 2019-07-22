@@ -20,7 +20,7 @@ class BuddySelectionViewController: UIViewController {
         lastPickedBuddies = []
         
         let method = methodPickerViewController.getSelectedMethod()
-        let (buddy1, buddy2) = method.pickFrom(globalBuddyList)
+        let (buddy1, buddy2) = method.pickFrom(getBuddyList())
         
         if (buddy1 != nil && buddy2 != nil) {
             firstBuddyTextField.text = buddy1!.name

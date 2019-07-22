@@ -173,7 +173,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Obv-Kj-qgt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
