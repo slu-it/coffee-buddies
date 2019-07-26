@@ -22,11 +22,16 @@
                                 <rect key="frame" x="0.0" y="440" width="414" height="16"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-he-ZsI">
+                                <rect key="frame" x="197" y="506" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3hh-he-ZsI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Oc4-sA-ZLI"/>
                             <constraint firstItem="GiJ-cC-Gwy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="WEi-i9-r1d"/>
                             <constraint firstItem="GiJ-cC-Gwy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YXY-OM-N5e"/>
+                            <constraint firstItem="3hh-he-ZsI" firstAttribute="top" secondItem="GiJ-cC-Gwy" secondAttribute="bottom" constant="50" id="bgC-5I-tPs"/>
                             <constraint firstAttribute="trailing" secondItem="GiJ-cC-Gwy" secondAttribute="trailing" id="ga0-qF-Vtb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

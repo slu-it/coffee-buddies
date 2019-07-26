@@ -14,6 +14,9 @@ class BuddySelectionViewController: UIViewController {
         super.viewDidLoad()
         methodPicker.dataSource = methodPickerViewController
         methodPicker.delegate = methodPickerViewController
+        if (methodPicker.numberOfRows(inComponent: 0) == 1) {
+            methodPicker.isHidden = true
+        }
     }
     
     @IBAction func pickTwoBuddies() {
