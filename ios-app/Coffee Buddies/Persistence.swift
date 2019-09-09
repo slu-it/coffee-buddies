@@ -5,7 +5,7 @@ private let TABLE_TWO = "TABLE_TWO"
 private let INTERN = "INTERN"
 private let EXTERN = "EXTERN"
 
-private let hardCodedGroupCategories = Array(arrayLiteral:
+private var groupCategories = Array(arrayLiteral:
     GroupCategory(
         id: "TABLES",
         label: "Tables",
@@ -20,11 +20,24 @@ private let hardCodedGroupCategories = Array(arrayLiteral:
     )
 )
 
-func getGroupCategories() -> Array<GroupCategory> {
-    return hardCodedGroupCategories
+
+func addGroupCategory(_ groupCategory: GroupCategory) {
+    
 }
 
-private let hardCodedBuddyList = Array(arrayLiteral:
+func updateGroupCategory(_ groupCategory: GroupCategory) {
+    
+}
+
+func deleteGroupCategoryById(_ id: String) {
+    
+}
+
+func getGroupCategories() -> Array<GroupCategory> {
+    return groupCategories
+}
+
+private let buddies = Array(arrayLiteral:
     Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN]),
     Buddy(name: "Anja", groups: [TABLE_ONE, EXTERN]),
     Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN]),
@@ -34,11 +47,16 @@ private let hardCodedBuddyList = Array(arrayLiteral:
     Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN]),
     Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN]),
     Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
+    Buddy(name: "Nadine", groups: [TABLE_TWO, EXTERN]),
     Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),
     Buddy(name: "Stefan L.", groups: [TABLE_TWO, EXTERN]),
     Buddy(name: "Stephan B.", groups: [TABLE_ONE, EXTERN])
 )
 
+func addBuddy(_ buddy: Buddy) {
+    
+}
+
 func getBuddyList() -> Array<Buddy> {
-    return hardCodedBuddyList
+    return buddies
 }
