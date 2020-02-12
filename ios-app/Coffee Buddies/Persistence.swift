@@ -45,7 +45,7 @@ private let buddies = Array(arrayLiteral:
     Buddy(name: "Dennis", groups: [TABLE_ONE, INTERN]),
     Buddy(name: "Florian", groups: [TABLE_TWO, INTERN]),
     Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN]),
-    Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN]),
+    // Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN]),
     Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
     Buddy(name: "Nadine", groups: [TABLE_TWO, EXTERN]),
     Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),

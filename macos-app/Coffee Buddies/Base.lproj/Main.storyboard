@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -718,7 +719,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="JIu-ty-9nW"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VZE-8d-Ii1">
-                                <rect key="frame" x="23" y="376" width="260" height="36"/>
+                                <rect key="frame" x="23" y="377" width="260" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="7oL-Ev-GBE"/>
                                 </constraints>
@@ -740,7 +741,7 @@
                                 </textFieldCell>
                             </textField>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-US-kD3">
-                                <rect key="frame" x="407" y="591" width="693" height="23"/>
+                                <rect key="frame" x="406.5" y="591" width="694" height="23"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="texturedSquare" trackingMode="selectOne" id="s11-ec-y76">
                                     <font key="font" metaFont="system"/>
                                     <segments>
@@ -751,7 +752,7 @@
                                 </segmentedCell>
                             </segmentedControl>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C9z-ZH-wwu">
-                                <rect key="frame" x="407" y="100" width="693" height="36"/>
+                                <rect key="frame" x="407" y="100" width="693" height="35"/>
                                 <buttonCell key="cell" type="bevel" title="Pick" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="JaI-Na-C8D">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="30"/>
@@ -761,10 +762,10 @@
                                 </connections>
                             </button>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abk-bY-M7l">
-                                <rect key="frame" x="381" y="277" width="719" height="140"/>
+                                <rect key="frame" x="381" y="277" width="719" height="139"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jYU-WR-hDg">
-                                        <rect key="frame" x="0.0" y="90" width="719" height="50"/>
+                                        <rect key="frame" x="0.0" y="89" width="719" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="xIs-yu-O7M"/>
                                         </constraints>
@@ -775,7 +776,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xwb-3S-zl6">
-                                        <rect key="frame" x="-2" y="58" width="723" height="24"/>
+                                        <rect key="frame" x="-2" y="58" width="723" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="&amp;" id="eO3-3x-Efi">
                                             <font key="font" metaFont="system" size="20"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -848,6 +849,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="1620" height="1458"/>
+        <image name="logo" width="810" height="729"/>
     </resources>
 </document>

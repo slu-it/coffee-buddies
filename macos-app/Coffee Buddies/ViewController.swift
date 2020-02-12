@@ -33,7 +33,7 @@ class ViewController: NSViewController {
             Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),
             Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN]),
             Buddy(name: "Florian", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Mareike", groups: [TABLE_TWO, INTERN])
+            Buddy(name: "Nadine", groups: [TABLE_TWO, EXTERN])
         ]
     )
     
