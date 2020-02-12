@@ -22,24 +22,27 @@ class ViewController: NSViewController {
     // TODO: should be stored in a database to be more flexible
     private let buddyList = BuddyList(
         buddies: [
-            Buddy(name: "Matthias", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Barbara", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Dennis", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Stephan B.", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Anja", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Marco", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Christian", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Stefan L.", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Stefan G.", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Alexander", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Florian", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Nadine", groups: [TABLE_TWO, EXTERN])
+            Buddy(name: "Matthias", image: "matthias_1", groups: [TABLE_ONE, INTERN]),
+            Buddy(name: "Barbara", image: "barbara_1", groups: [TABLE_ONE, INTERN]),
+            Buddy(name: "Dennis", image: "dennis_2", groups: [TABLE_ONE, INTERN]),
+            Buddy(name: "Stephan B.", image: "stephan_b_1", groups: [TABLE_ONE, EXTERN]),
+            Buddy(name: "Anja", image: "anja_1", groups: [TABLE_ONE, EXTERN]),
+            Buddy(name: "Marco", image: "marco_1", groups: [TABLE_ONE, EXTERN]),
+            Buddy(name: "Christian", image: "christian_2", groups: [TABLE_TWO, EXTERN]),
+            Buddy(name: "Stefan L.", image: "stefan_l_1", groups: [TABLE_TWO, EXTERN]),
+            Buddy(name: "Stefan G.", image: "stefan_g_1", groups: [TABLE_TWO, EXTERN]),
+            Buddy(name: "Alexander", image: "alexander_1", groups: [TABLE_TWO, INTERN]),
+            Buddy(name: "Florian", image: "florian_1", groups: [TABLE_TWO, INTERN]),
+            Buddy(name: "Nadine", image: "nadine_1", groups: [TABLE_TWO, EXTERN])
         ]
     )
     
     @IBOutlet weak var methodSelector: NSSegmentedControl!
+    
     @IBOutlet weak var firstBuddyTextField: NSTextField!
     @IBOutlet weak var secondBuddyTextField: NSTextField!
+    @IBOutlet weak var firstBuddyImage: NSImageView!
+    @IBOutlet weak var secondBuddyImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,10 +81,12 @@ class ViewController: NSViewController {
     
     private func setFirstBuddy(_ buddy: Buddy) {
         firstBuddyTextField.stringValue = buddy.name
+        firstBuddyImage.image = NSImage(named: buddy.image)
     }
     
     private func setSecondBuddy(_ buddy: Buddy) {
         secondBuddyTextField.stringValue = buddy.name
+        secondBuddyImage.image = NSImage(named: buddy.image)
     }
     
 }

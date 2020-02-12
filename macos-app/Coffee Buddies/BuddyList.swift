@@ -40,5 +40,6 @@ class BuddyList {
 
 struct Buddy : Hashable {
     var name: String
+    var image: String
     var groups: Set<String>
 }
