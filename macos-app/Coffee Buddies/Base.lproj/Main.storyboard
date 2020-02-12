@@ -773,17 +773,19 @@
                             <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="GhD-3M-tq7">
                                 <rect key="frame" x="357" y="185" width="881" height="421"/>
                                 <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Khx-YS-gm5">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Khx-YS-gm5">
                                         <rect key="frame" x="-3" y="3" width="442" height="421"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" image="unknown" id="xMV-yP-ra5"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="unknown" id="xMV-yP-ra5"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-g1-zdL">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sVF-g1-zdL">
                                         <rect key="frame" x="443" y="3" width="441" height="421"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" image="unknown" id="zfS-Yu-7uh"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="unknown" id="zfS-Yu-7uh"/>
                                     </imageView>
                                 </subviews>
                                 <visibilityPriorities>
-                                    <integer value="1000"/>
+                                    <real value="1000"/>
                                     <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
@@ -838,7 +840,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="810" height="729"/>
+        <image name="logo" width="375" height="280.5"/>
         <image name="unknown" width="421" height="421"/>
     </resources>
 </document>
