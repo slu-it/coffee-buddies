@@ -21,6 +21,9 @@ class BuddyListTableViewDataSource: NSObject, NSTableViewDataSource {
 }
 
 class BuddyListTableViewDelegate: NSObject, NSTableViewDelegate {
+
+    private let buddyCellId = NSUserInterfaceItemIdentifier("BuddyCellId")
+    private let presentCellId = NSUserInterfaceItemIdentifier("PresentCellId")
     
     private let buddyList: Array<Buddy>
     
@@ -28,10 +31,24 @@ class BuddyListTableViewDelegate: NSObject, NSTableViewDelegate {
         self.buddyList = buddyList
     }
     
-    func tableViewSelectionDidChange(_ notification: Notification) {
-        // let buddy = buddyList[indexPath.row]
-      //  buddy.switchPresent()
-       // tableView.reloadData()
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let buddy = buddyList[row]
+        
+        if tableColumn == tableView.tableColumns[0] {
+            let cell = tableView.makeView(withIdentifier: buddyCellId, owner: nil) as? NSTableCellView
+            cell?.textField?.stringValue = buddy.name
+            cell?.imageView?.image = NSImage(named: buddy.image)
+            return cell
+        }
+        
+        if tableColumn == tableView.tableColumns[1] {
+            let cell = tableView.makeView(withIdentifier: presentCellId, owner: nil) as? NSTableCellView
+            cell?.textField?.stringValue = buddy.name
+            cell?.imageView?.image = NSImage(named: buddy.image)
+            return cell
+        }
+
+        return nil
     }
     
 }
