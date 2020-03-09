@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A228FF32416B35E0094DEBF /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A228FF22416B35E0094DEBF /* Buddy.swift */; };
+		0A228FF52416B3850094DEBF /* BuddyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A228FF42416B3850094DEBF /* BuddyExtensions.swift */; };
+		0A228FF72416B3A20094DEBF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A228FF62416B3A20094DEBF /* Persistence.swift */; };
+		0A228FF92416B3BC0094DEBF /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A228FF82416B3BC0094DEBF /* Method.swift */; };
+		0A228FFD2416B49A0094DEBF /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A228FFC2416B49A0094DEBF /* Groups.swift */; };
 		0A7D1F0C22DCF87000735825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F0B22DCF87000735825 /* AppDelegate.swift */; };
 		0A7D1F0E22DCF87000735825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F0D22DCF87000735825 /* ViewController.swift */; };
 		0A7D1F1022DCF87100735825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D1F0F22DCF87100735825 /* Assets.xcassets */; };
 		0A7D1F1322DCF87100735825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D1F1122DCF87100735825 /* Main.storyboard */; };
 		0A7D1F1F22DCF87100735825 /* Coffee_BuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F1E22DCF87100735825 /* Coffee_BuddiesTests.swift */; };
 		0A7D1F2A22DCF87100735825 /* Coffee_BuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F2922DCF87100735825 /* Coffee_BuddiesUITests.swift */; };
-		0A7D1F3822DCF97100735825 /* BuddyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F3722DCF97100735825 /* BuddyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A228FF22416B35E0094DEBF /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
+		0A228FF42416B3850094DEBF /* BuddyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyExtensions.swift; sourceTree = "<group>"; };
+		0A228FF62416B3A20094DEBF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		0A228FF82416B3BC0094DEBF /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		0A228FFC2416B49A0094DEBF /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		0A7D1F0822DCF87000735825 /* Coffee Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Buddies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D1F0B22DCF87000735825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A7D1F0D22DCF87000735825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +56,6 @@
 		0A7D1F2522DCF87100735825 /* Coffee BuddiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee BuddiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D1F2922DCF87100735825 /* Coffee_BuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_BuddiesUITests.swift; sourceTree = "<group>"; };
 		0A7D1F2B22DCF87100735825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7D1F3722DCF97100735825 /* BuddyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +112,11 @@
 				0A7D1F1122DCF87100735825 /* Main.storyboard */,
 				0A7D1F1422DCF87100735825 /* Info.plist */,
 				0A7D1F1522DCF87100735825 /* Coffee_Buddies.entitlements */,
-				0A7D1F3722DCF97100735825 /* BuddyList.swift */,
+				0A228FF22416B35E0094DEBF /* Buddy.swift */,
+				0A228FF42416B3850094DEBF /* BuddyExtensions.swift */,
+				0A228FF62416B3A20094DEBF /* Persistence.swift */,
+				0A228FF82416B3BC0094DEBF /* Method.swift */,
+				0A228FFC2416B49A0094DEBF /* Groups.swift */,
 			);
 			path = "Coffee Buddies";
 			sourceTree = "<group>";
@@ -258,8 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A7D1F0E22DCF87000735825 /* ViewController.swift in Sources */,
-				0A7D1F3822DCF97100735825 /* BuddyList.swift in Sources */,
+				0A228FF52416B3850094DEBF /* BuddyExtensions.swift in Sources */,
+				0A228FF72416B3A20094DEBF /* Persistence.swift in Sources */,
+				0A228FF32416B35E0094DEBF /* Buddy.swift in Sources */,
+				0A228FF92416B3BC0094DEBF /* Method.swift in Sources */,
 				0A7D1F0C22DCF87000735825 /* AppDelegate.swift in Sources */,
+				0A228FFD2416B49A0094DEBF /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

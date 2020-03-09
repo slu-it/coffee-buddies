@@ -732,25 +732,6 @@
                             <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Br7-Wm-w9c">
                                 <rect key="frame" x="304" y="5" width="5" height="747"/>
                             </box>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zJ1-1n-wGi">
-                                <rect key="frame" x="405" y="688" width="785" height="19"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Choose a method:" id="Vra-gn-0jU">
-                                    <font key="font" metaFont="system" size="15"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-US-kD3">
-                                <rect key="frame" x="406.5" y="655" width="782" height="23"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="texturedSquare" trackingMode="selectOne" id="s11-ec-y76">
-                                    <font key="font" metaFont="system"/>
-                                    <segments>
-                                        <segment label="Random" selected="YES"/>
-                                        <segment label="Tables" tag="1"/>
-                                        <segment label="Intern + Extern"/>
-                                    </segments>
-                                </segmentedCell>
-                            </segmentedControl>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C9z-ZH-wwu">
                                 <rect key="frame" x="407" y="100" width="781" height="35"/>
                                 <buttonCell key="cell" type="bevel" title="Pick" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="JaI-Na-C8D">
@@ -771,21 +752,21 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" translatesAutoresizingMaskIntoConstraints="NO" id="GhD-3M-tq7">
-                                <rect key="frame" x="357" y="185" width="881" height="421"/>
+                                <rect key="frame" x="357" y="185" width="881" height="422"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Khx-YS-gm5">
-                                        <rect key="frame" x="-3" y="3" width="442" height="421"/>
+                                        <rect key="frame" x="-3" y="4" width="442" height="421"/>
                                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="unknown" id="xMV-yP-ra5"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sVF-g1-zdL">
-                                        <rect key="frame" x="443" y="3" width="441" height="421"/>
+                                        <rect key="frame" x="443" y="4" width="441" height="421"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="unknown" id="zfS-Yu-7uh"/>
                                     </imageView>
                                 </subviews>
                                 <visibilityPriorities>
-                                    <real value="1000"/>
+                                    <integer value="1000"/>
                                     <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
@@ -804,22 +785,16 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kzz-US-kD3" secondAttribute="trailing" constant="100" id="4OF-vX-jrd"/>
+                            <constraint firstItem="GhD-3M-tq7" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="150" id="0JD-8H-Wo3"/>
                             <constraint firstItem="W8t-Wx-YUW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="25" id="848-yJ-sPU"/>
-                            <constraint firstItem="kzz-US-kD3" firstAttribute="top" secondItem="zJ1-1n-wGi" secondAttribute="bottom" constant="10" id="84T-1K-wCO"/>
                             <constraint firstItem="C9z-ZH-wwu" firstAttribute="leading" secondItem="Br7-Wm-w9c" secondAttribute="trailing" constant="100" id="EyB-fP-Jqu"/>
                             <constraint firstAttribute="bottom" secondItem="Br7-Wm-w9c" secondAttribute="bottom" constant="5" id="HZp-hJ-nio"/>
-                            <constraint firstItem="kzz-US-kD3" firstAttribute="leading" secondItem="Br7-Wm-w9c" secondAttribute="trailing" constant="100" id="IYT-0b-dy2"/>
                             <constraint firstItem="GhD-3M-tq7" firstAttribute="leading" secondItem="Br7-Wm-w9c" secondAttribute="trailing" constant="50" id="Jus-wN-iAu"/>
-                            <constraint firstItem="GhD-3M-tq7" firstAttribute="top" secondItem="kzz-US-kD3" secondAttribute="bottom" constant="50" id="MiB-xu-a75"/>
                             <constraint firstAttribute="trailing" secondItem="GhD-3M-tq7" secondAttribute="trailing" constant="50" id="NlV-Gq-0qW"/>
-                            <constraint firstAttribute="trailing" secondItem="zJ1-1n-wGi" secondAttribute="trailing" constant="100" id="SGX-tT-LWS"/>
                             <constraint firstItem="C9z-ZH-wwu" firstAttribute="top" secondItem="GhD-3M-tq7" secondAttribute="bottom" constant="50" id="Tgm-pf-n74"/>
                             <constraint firstItem="Br7-Wm-w9c" firstAttribute="leading" secondItem="W8t-Wx-YUW" secondAttribute="trailing" constant="25" id="TjK-Q5-bdj"/>
                             <constraint firstItem="VZE-8d-Ii1" firstAttribute="top" secondItem="W8t-Wx-YUW" secondAttribute="bottom" id="Z4C-Ip-ogx"/>
                             <constraint firstItem="VZE-8d-Ii1" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="25" id="cyY-DT-Ocm"/>
-                            <constraint firstItem="zJ1-1n-wGi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="fUY-ZP-rIX"/>
-                            <constraint firstItem="zJ1-1n-wGi" firstAttribute="leading" secondItem="Br7-Wm-w9c" secondAttribute="trailing" constant="100" id="iCH-RT-BqR"/>
                             <constraint firstItem="Br7-Wm-w9c" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="mOm-pT-edN"/>
                             <constraint firstAttribute="bottom" secondItem="C9z-ZH-wwu" secondAttribute="bottom" constant="100" id="sE3-M2-IB0"/>
                             <constraint firstAttribute="trailing" secondItem="C9z-ZH-wwu" secondAttribute="trailing" constant="100" id="tDK-lq-Kvm"/>
@@ -829,7 +804,6 @@
                     <connections>
                         <outlet property="firstBuddyImage" destination="Khx-YS-gm5" id="yws-7P-LZa"/>
                         <outlet property="firstBuddyTextField" destination="Qa7-vk-azu" id="StL-Vf-4kg"/>
-                        <outlet property="methodSelector" destination="kzz-US-kD3" id="30x-fw-KeB"/>
                         <outlet property="secondBuddyImage" destination="sVF-g1-zdL" id="IF6-9B-Ktc"/>
                         <outlet property="secondBuddyTextField" destination="H8f-Ka-Cp3" id="Bz5-Ku-r62"/>
                     </connections>

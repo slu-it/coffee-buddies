@@ -1,83 +1,53 @@
-//
-//  ViewController.swift
-//  Coffee Buddies
-//
-//  Created by Stefan on 15.07.19.
-//  Copyright © 2019 Stefan Ludwig. All rights reserved.
-//
-
 import Cocoa
-
-private let TABLE_ONE = "TABLE_ONE"
-private let TABLE_TWO = "TABLE_TWO"
-private let INTERN = "INTERN"
-private let EXTERN = "EXTERN"
-
-private let METHOD_RANDOM_INDEX = 0
-private let METHOD_TABLE_INDEX = 1
-private let METHOD_INTERN_EXTERN_INDEX = 2
 
 class ViewController: NSViewController {
 
-    // TODO: should be stored in a database to be more flexible
-    private let buddyList = BuddyList(
-        buddies: [
-            Buddy(name: "Matthias", image: "matthias_1", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Barbara", image: "barbara_1", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Dennis", image: "dennis_2", groups: [TABLE_ONE, INTERN]),
-            Buddy(name: "Stephan B.", image: "stephan_b_1", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Anja", image: "anja_1", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Marco", image: "marco_1", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Christian", image: "christian_2", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Stefan L.", image: "stefan_l_1", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Stefan G.", image: "stefan_g_1", groups: [TABLE_TWO, EXTERN]),
-            Buddy(name: "Alexander", image: "alexander_1", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Florian", image: "florian_1", groups: [TABLE_TWO, INTERN]),
-            Buddy(name: "Nadine", image: "nadine_1", groups: [TABLE_ONE, EXTERN]),
-            Buddy(name: "Berthold", image: "berthold_1", groups: [TABLE_TWO, INTERN])
-        ]
-    )
-    
-    @IBOutlet weak var methodSelector: NSSegmentedControl!
-    
     @IBOutlet weak var firstBuddyTextField: NSTextField!
     @IBOutlet weak var secondBuddyTextField: NSTextField!
     @IBOutlet weak var firstBuddyImage: NSImageView!
     @IBOutlet weak var secondBuddyImage: NSImageView!
+    
+    private var pickMethod = RandomMethod()
+    private var lastPickedBuddies = Array<Buddy>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func pickButtonAction(_ sender: NSButton) {
-        switch methodSelector.selectedSegment {
-            case METHOD_RANDOM_INDEX:
-                pickRandomly()
-            case METHOD_TABLE_INDEX:
-                pickOneForEachTable()
-            case METHOD_INTERN_EXTERN_INDEX:
-                pickOneInternalAndOneExternal()
-            default:
-                print("unkown method selected")
+        lastPickedBuddies = []
+        
+        let (buddy1, buddy2) = pickMethod.pickFrom(getBuddyList())
+        
+        if (buddy1 != nil && buddy2 != nil) {
+            firstBuddyTextField.stringValue = buddy1!.name
+            firstBuddyImage.image = NSImage(named: buddy1!.image)
+            
+            secondBuddyTextField.stringValue = buddy2!.name
+            secondBuddyImage.image = NSImage(named: buddy2!.image)
+            
+            lastPickedBuddies = Array(arrayLiteral: buddy1!, buddy2!)
+        } else if (buddy1 != nil && buddy2 == nil) {
+            firstBuddyTextField.stringValue = buddy1!.name
+            firstBuddyImage.image = NSImage(named: buddy1!.image)
+            
+            secondBuddyTextField.stringValue = "no other buddy present :("
+            secondBuddyImage.image = nil
+        } else if (buddy1 == nil && buddy2 != nil) {
+            firstBuddyTextField.stringValue = "no other buddy present :("
+            firstBuddyImage.image = nil
+            
+            secondBuddyTextField.stringValue = buddy2!.name
+            secondBuddyImage.image = NSImage(named: buddy2!.image)
+        } else {
+            firstBuddyTextField.stringValue = "no buddies present at all :("
+            firstBuddyImage.image = nil
+            
+            secondBuddyTextField.stringValue = ""
+            secondBuddyImage.image = nil
         }
-    }
-    
-    private func pickRandomly() {
-        let buddies = Array(buddyList.pick(amount: 2))
-        setFirstBuddy(buddies[0])
-        setSecondBuddy(buddies[1])
-    }
-    
-    private func pickOneForEachTable() {
-        let buddies = buddyList.pick(groups: [TABLE_ONE, TABLE_TWO])
-        setFirstBuddy(buddies[TABLE_ONE]!)
-        setSecondBuddy(buddies[TABLE_TWO]!)
-    }
-    
-    private func pickOneInternalAndOneExternal() {
-        let buddies = buddyList.pick(groups: [INTERN, EXTERN])
-        setFirstBuddy(buddies[INTERN]!)
-        setSecondBuddy(buddies[EXTERN]!)
+        
+        sender.isEnabled = lastPickedBuddies.count == 2
     }
     
     private func setFirstBuddy(_ buddy: Buddy) {
