@@ -18,6 +18,7 @@
 		0A7D1F1322DCF87100735825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D1F1122DCF87100735825 /* Main.storyboard */; };
 		0A7D1F1F22DCF87100735825 /* Coffee_BuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F1E22DCF87100735825 /* Coffee_BuddiesTests.swift */; };
 		0A7D1F2A22DCF87100735825 /* Coffee_BuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7D1F2922DCF87100735825 /* Coffee_BuddiesUITests.swift */; };
+		0A8310262416C4FD00432FA3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8310252416C4FD00432FA3 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		0A7D1F2522DCF87100735825 /* Coffee BuddiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee BuddiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7D1F2922DCF87100735825 /* Coffee_BuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_BuddiesUITests.swift; sourceTree = "<group>"; };
 		0A7D1F2B22DCF87100735825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8310252416C4FD00432FA3 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		0A7D1F0A22DCF87000735825 /* Coffee Buddies */ = {
 			isa = PBXGroup;
 			children = (
+				0A8310252416C4FD00432FA3 /* Configuration.swift */,
 				0A7D1F0B22DCF87000735825 /* AppDelegate.swift */,
 				0A7D1F0D22DCF87000735825 /* ViewController.swift */,
 				0A7D1F0F22DCF87100735825 /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 				0A228FF32416B35E0094DEBF /* Buddy.swift in Sources */,
 				0A228FF92416B3BC0094DEBF /* Method.swift in Sources */,
 				0A7D1F0C22DCF87000735825 /* AppDelegate.swift in Sources */,
+				0A8310262416C4FD00432FA3 /* Configuration.swift in Sources */,
 				0A228FFD2416B49A0094DEBF /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
