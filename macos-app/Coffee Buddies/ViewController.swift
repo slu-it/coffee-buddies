@@ -6,12 +6,22 @@ class ViewController: NSViewController {
     @IBOutlet weak var secondBuddyTextField: NSTextField!
     @IBOutlet weak var firstBuddyImage: NSImageView!
     @IBOutlet weak var secondBuddyImage: NSImageView!
+    @IBOutlet weak var configurationTableView: NSTableView!
     
     private var pickMethod = RandomMethod()
     private var lastPickedBuddies = Array<Buddy>()
     
+    private var configViewDataSource: BuddyListTableViewDataSource?
+    private var configViewDelegate: BuddyListTableViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configViewDataSource = BuddyListTableViewDataSource(getBuddyList())
+        configViewDelegate = BuddyListTableViewDelegate(getBuddyList())
+        
+        configurationTableView.dataSource = configViewDataSource
+        configurationTableView.delegate = configViewDelegate
     }
 
     @IBAction func pickButtonAction(_ sender: NSButton) {
